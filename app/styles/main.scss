@@ -37,5 +37,78 @@ body {
     height: 0.5em;
     margin: 0.1em;
     background-color: #ffffff;
-    border-radius: 50%;
+    border-radius: around
+}
+.ng-scope {
+    width: 100%;
+    height: 94vh;
+}
+
+.init {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+}
+
+.Panel {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: stretch;
+    margin: 0% 8%;
+    padding: 5%;
+    color: #ffffff;
+    border-radius: 1em;
+    font-size: 2em;
+}
+
+.greenPanel {
+    background-color: green;
+}
+
+.orangePanel {
+    background-color: orange;
+}
+
+.redPanel {
+    background-color: red;
+}
+
+.bluePanel {
+    background-color: blue;
 }
