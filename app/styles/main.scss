@@ -37,7 +37,6 @@ body {
     height: 0.5em;
     margin: 0.1em;
     background-color: #ffffff;
-    border-radius: around
 }
 .ng-scope {
     width: 100%;
@@ -91,24 +90,60 @@ body {
     -ms-flex-item-align: auto;
     align-self: stretch;
     margin: 0% 8%;
-    padding: 5%;
+    padding: 2% 5%;
     color: #ffffff;
     border-radius: 1em;
-    font-size: 2em;
+    font-size: 3em;
+    text-decoration: none;
+    display: inline-flex;
 }
 
 .greenPanel {
     background-color: green;
 }
 
+.Panel .name>p{
+    margin:0;
+}
+.Panel .iconPanel {
+    flex: 1 1 auto;
+}
+
+.Panel .iconPanel>img{
+    width: 3em;
+    height: 3em;
+    float: right;
+}
+
+.greenPanel:hover {
+    background-color: black;
+}
+
+.greenPanel:hover .iconPanel>img {
+    transition: all 1s ease-in-out;
+    -moz-transform:rotate(125deg);
+}
+
 .orangePanel {
     background-color: orange;
+}
+
+.orangePanel:hover {
+    background-color: black;
 }
 
 .redPanel {
     background-color: red;
 }
 
+.redPanel:hover {
+    background-color: black;
+}
+
 .bluePanel {
     background-color: blue;
+}
+
+.bluePanel:hover {
+    background-color: black;
 }
