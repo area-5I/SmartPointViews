@@ -9,5 +9,4 @@
  */
 angular.module('smartPointViewsApp')
   .controller('MainCtrl', function ($scope) {
-    ];
   });
