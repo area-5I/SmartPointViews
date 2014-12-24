@@ -22,6 +22,22 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
+      .when('/llamadas', {
+        templateUrl: 'views/llamadas.html',
+        controller: 'LlamadasCtrl'
+      })
+      .when('/recarga', {
+        templateUrl: 'views/recarga.html',
+        controller: 'RecargaCtrl'
+      })
+      .when('/emergencia', {
+        templateUrl: 'views/emergencia.html',
+        controller: 'EmergenciaCtrl'
+      })
+      .when('/ayuda', {
+        templateUrl: 'views/ayuda.html',
+        controller: 'AyudaCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
