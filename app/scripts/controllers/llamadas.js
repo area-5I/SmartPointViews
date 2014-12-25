@@ -9,9 +9,11 @@
  */
 angular.module('smartPointViewsApp')
   .controller('LlamadasCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+      $scope.numero="";
+      $scope.marcar=function(teclaPulsada) {
+        $scope.numero=$scope.numero.concat(teclaPulsada);
+      }
+      $scope.borrar=function() {
+        $scope.numero=$scope.numero.slice(0,$scope.numero.length-1);
+      }
   });
