@@ -271,3 +271,38 @@ button:focus {
     width: 100%;
     height: 100%;
 }
+.empresas {
+    padding: 0;
+    margin: 5%;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+//views of recargas
+.circlePanel {
+    width: 35%;
+    height: 20%;
+    margin: 2%;
+    font-size: 3em;
+    text-align: center;
+    background-color: orange;
+    border-radius: 5em;
+}
+
+.circlePanel>img {
+    width: 4.5em;
+    padding: 0.5em;
+    height: 4.5em;
+}
+
+#atrasEmpresas>img {
+    padding: 1.2em;
+    width: 3em;
+    height: 3em;
+}
