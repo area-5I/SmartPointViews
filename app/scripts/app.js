@@ -38,6 +38,10 @@ angular
         templateUrl: 'views/ayuda.html',
         controller: 'AyudaCtrl'
       })
+      .when('/recarga/recargador/:empresaId', {
+        templateUrl: 'views/recarga/recargador.html',
+        controller: 'RecargaRecargadorCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
