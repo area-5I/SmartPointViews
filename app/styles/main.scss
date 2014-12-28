@@ -61,7 +61,6 @@ button:focus {
 .init {
     display: -webkit-box;
     display: -moz-box;
-    display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
     -webkit-box-direction: normal;
@@ -69,23 +68,18 @@ button:focus {
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
     -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: justify;
     -moz-box-pack: justify;
     -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     -webkit-align-content: stretch;
-    -ms-flex-line-pack: stretch;
     align-content: stretch;
     -webkit-box-align: stretch;
     -moz-box-align: stretch;
     -webkit-align-items: stretch;
-    -ms-flex-align: stretch;
     align-items: stretch;
     width: 100%;
     height: 97%;
@@ -94,25 +88,25 @@ button:focus {
 
 .Panel {
     -webkit-box-ordinal-group: 1;
-    -moz-box-ordinal-group: 1;
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
+    -webkit-order: 1;
+    order: 1;
     -webkit-box-flex: 0;
-    -moz-box-flex: 0;
     -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
     flex: 0 1 auto;
     -webkit-align-self: stretch;
-    -ms-flex-item-align: stretch;
     align-self: stretch;
-    margin: 0% 15%;
+    margin: 2% 15%;
     padding: 2% 5%;
     color: #ffffff;
     border-radius: 1em;
     font-size: 2.5em;
     text-decoration: none;
     display: inline-flex;
+    transition: all 0.5s ease;
+}
+
+.Panel:active {
+    margin-left: 5em;
 }
 
 .greenPanel {
@@ -138,7 +132,6 @@ button:focus {
 
 .Panel:hover .iconPanel>img {
     transition: all 0.2s ease-in-out;
-    //-moz-transform:rotate(125deg);
     width:2.1em;
     height:2.1em;
 }
@@ -173,33 +166,37 @@ button:focus {
     padding:2% 10%;
 }
 
-.teclado .pantalla {
-    width: 80%;
+.pantalla {
+    width: 75%;
     height: 15%;
     border: 0.2em solid;
     border-radius: 3em;
     margin-bottom: 2%;
+    display:inline-flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: stretch;
 }
 
-.teclado .pantalla>input {
-    width: 80%;
-    height: 90%;
-    font-size: 6em;
+.pantalla>input {
+    font-size: 3.5em;
     border: 0 none;
     border-radius: 3em;
-    margin-left:0.5em;
-    -webkit-flex: 0 1 auto;
-}
-.teclado .pantalla>button {
-    display: inline-flex;
-    -webkit-flex: 0 1 auto;
+    margin-left:0.2em;
+    order:1;
 }
 
-.teclado .pantalla>button>img {
-    margin: 0.5em;
-    width: 6em;
-    height: 6em;
+.pantalla>button {
+    order:2;
+    flex: 1 0 auto;
 }
+
+.pantalla>button>img {
+    margin: 0.5em;
+    width: 5em;
+    height: 5em;
+}
+
 .cuerpo {
     display: inline-flex;
     width: 80%;
@@ -239,19 +236,51 @@ button:focus {
     width: 15%;
     height: 100%;
     flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
-.opciones .atras {
-
-}
-
-.atras {
+.opciones .entrada {
+    margin-top: 2em;
     background-color: green;
 }
 
-.atras>img {
-    width: 4em;
-    height: 4em;
+.opciones .dinero {
+    width: 5em;
+    height: 5em;
+    border-radius: 4em;
+    text-align: center;
+    background-color: green;
+}
+
+.opciones .dinero .moneda {
+    font-size: 3em;
+    color: white;
+    margin: 0.2em;
+    display: inline-block;
+}
+
+.opciones .dinero .letraGreen {
+    display: inline-block;
+    font-size: 3em;
+    color: green;
+}
+
+.opciones .atras {
+    width: 5em;
+    height: 5em;
+    border-radius: 4em;
+    text-align: center;
+    background-color: green;
+    margin-bottom: 1em;
+}
+
+.opciones .atras>img {
+    width: 2.5em;
+    height: 2.5em;
+    margin:1.2em;
 }
 
 .llamar {
@@ -271,6 +300,8 @@ button:focus {
     width: 100%;
     height: 100%;
 }
+
+//views of recargas
 .empresas {
     padding: 0;
     margin: 5%;
@@ -284,7 +315,7 @@ button:focus {
     -webkit-flex-flow: row wrap;
     justify-content: space-around;
 }
-//views of recargas
+
 .circlePanel {
     width: 35%;
     height: 20%;
@@ -293,6 +324,13 @@ button:focus {
     text-align: center;
     background-color: orange;
     border-radius: 5em;
+    transition: all 1s ease;
+}
+
+.circlePanel:hover {
+    width: 36%;
+    height: 21%;
+    background-color: black;
 }
 
 .circlePanel>img {
