@@ -24,7 +24,14 @@ angular
       })
       .when('/llamadas', {
         templateUrl: 'views/llamadas.html',
-        controller: 'LlamadasCtrl'
+        controller: 'LlamadasCtrl'/*,
+        resolve: {
+            delay: function($q, $timeout) {
+                var delay = $q.defer();
+                $timeout(delay.resolve, 1000);
+                return delay.promise;
+            }
+        }//Retardo por si se necesita animaciones cuando se pasa de vistas */
       })
       .when('/recarga', {
         templateUrl: 'views/recarga.html',

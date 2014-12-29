@@ -102,11 +102,7 @@ button:focus {
     font-size: 2.5em;
     text-decoration: none;
     display: inline-flex;
-    transition: all 0.5s ease;
-}
-
-.Panel:active {
-    margin-left: 5em;
+    transition: all 1s ease-in;
 }
 
 .greenPanel {
@@ -131,7 +127,7 @@ button:focus {
 }
 
 .Panel:hover .iconPanel>img {
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-out;
     width:2.1em;
     height:2.1em;
 }
@@ -181,10 +177,16 @@ button:focus {
 .pantalla>input {
     font-size: 3.5em;
     border: 0 none;
-    border-radius: 3em;
     margin-left:0.2em;
+    border-radius:0.5em;
     order:1;
 }
+
+.pantalla>input:focus {
+    outline: 0px solid transparent;
+    border: 0px solid transparent;
+}
+
 
 .pantalla>button {
     order:2;
@@ -248,22 +250,20 @@ button:focus {
 }
 
 .opciones .dinero {
-    width: 5em;
-    height: 5em;
-    border-radius: 4em;
     text-align: center;
-    background-color: green;
 }
 
 .opciones .dinero .moneda {
     font-size: 3em;
+    padding: 0.3em 0.6em;
     color: white;
-    margin: 0.2em;
-    display: inline-block;
+    display: inline;
+    background-color: green;
+    border-radius: 1em;
 }
 
 .opciones .dinero .letraGreen {
-    display: inline-block;
+    display: inline;
     font-size: 3em;
     color: green;
 }
