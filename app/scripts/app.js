@@ -49,6 +49,10 @@ angular
         templateUrl: 'views/recarga/recargador.html',
         controller: 'RecargaRecargadorCtrl'
       })
+      .when('/llamada/llamando/:numero', {
+        templateUrl: 'views/llamada/llamando.html',
+        controller: 'LlamadaLlamandoCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
