@@ -1,6 +1,34 @@
 <div class="teclado">
     <div class="pantalla">
         <input type="text" ng-model="numero">
-        <button ng-click="borrar()"><img src="../images/otros/borrar.svg"/></button>
+        <div class="contador">
+            <p>{{tiempo}}</p>
+        </div>
     </div>
+    <a href="#/llamadas" class="greenPanel Panel">
+        <div class="name">
+            <p>Ubicacion</p>
+        </div>
+        <div class="iconPanel">
+            <img src="../images/menu/auricular.svg"/>
+        </div>
+    </a>
+    <a href="#/recarga" class="orangePanel Panel">
+        <div class="name">
+            <p>Notas</p>
+        </div>
+        <div class="iconPanel">
+            <img src="../images/menu/carrito.svg"/>
+        </div>
+    </a>
+    <a href="#/emergencia" class="redPanel Panel">
+        <div class="name">
+            <p>Juegos</p>
+        </div>
+        <div class="iconPanel">
+            <img src="../images/menu/cruz_roja.svg"/>
+        </div>
+    </a>
+    <div class="llamar">
+        <button type="submit" ng-click="llamarNumero()"><img src="../images/menu/auricular.svg"/></button>
 </div>

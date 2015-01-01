@@ -198,6 +198,21 @@ button:focus {
     width: 5em;
     height: 5em;
 }
+.pantalla .contador {
+    margin: auto;
+    margin-right: 0.2em;
+    width: 1em;
+    padding: 0.2em 0.3em;
+    font-size: 2.3em;
+    order:2;
+    border:0.1em solid green;
+    border-radius: 4em;
+    flex: 1 0 auto;
+    text-align:center;
+}
+.pantalla .contador>p {
+    margin:0;
+}
 
 .cuerpo {
     display: inline-flex;
