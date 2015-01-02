@@ -359,3 +359,51 @@ button:focus {
     width: 3em;
     height: 3em;
 }
+
+.initLlamando {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-content: stretch;
+    align-content: stretch;
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    padding-left: 20%;
+    width: 60%;
+    height: 97%;
+}
+.llamando .pantalla {
+    margin: 2% 12%;
+}
+
+.colgarPanel {
+    border-radius: 30%;
+    width: 30%;
+    margin: auto;
+}
+
+.colgarPanel .iconPanel {
+    clear: both; 
+}
+
+.colgarPanel .iconPanel>img {
+    float:none;
+    margin:0 0.2em;
+    width:4em;
+    height:2em;
+}

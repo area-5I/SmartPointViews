@@ -1,34 +1,39 @@
-<div class="teclado">
+<div class="llamando">
     <div class="pantalla">
         <input type="text" ng-model="numero">
         <div class="contador">
             <p>{{tiempo}}</p>
         </div>
     </div>
-    <a href="#/llamadas" class="greenPanel Panel">
-        <div class="name">
-            <p>Ubicacion</p>
-        </div>
-        <div class="iconPanel">
-            <img src="../images/menu/auricular.svg"/>
-        </div>
-    </a>
-    <a href="#/recarga" class="orangePanel Panel">
-        <div class="name">
-            <p>Notas</p>
-        </div>
-        <div class="iconPanel">
-            <img src="../images/menu/carrito.svg"/>
-        </div>
-    </a>
-    <a href="#/emergencia" class="redPanel Panel">
-        <div class="name">
-            <p>Juegos</p>
-        </div>
-        <div class="iconPanel">
-            <img src="../images/menu/cruz_roja.svg"/>
-        </div>
-    </a>
-    <div class="llamar">
-        <button type="submit" ng-click="llamarNumero()"><img src="../images/menu/auricular.svg"/></button>
+    <div class="initLlamando">
+        <a href="#/llamadas" class="greenPanel Panel">
+            <div class="name">
+                <p>UBICACION</p>
+            </div>
+            <div class="iconPanel">
+                <img src="../images/interaccion/ubicacion.svg"/>
+            </div>
+        </a>
+        <a href="#/recarga" class="greenPanel Panel">
+            <div class="name">
+                <p>NOTAS</p>
+            </div>
+            <div class="iconPanel">
+                <img src="../images/interaccion/notas.svg"/>
+            </div>
+        </a>
+        <a href="#/emergencia" class="greenPanel Panel">
+            <div class="name">
+                <p>JUEGOS</p>
+            </div>
+            <div class="iconPanel">
+                <img src="../images/interaccion/juegos.svg"/>
+            </div>
+        </a>
+        <a href="#/emergencia" class="redPanel Panel colgarPanel">
+            <div class="iconPanel">
+                <img src="../images/otros/colgar.svg"/>
+            </div>
+        </a>
+    </div>
 </div>
