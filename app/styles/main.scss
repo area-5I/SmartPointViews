@@ -3,62 +3,21 @@
 
 
 /* Space out content a bit */
-body {
-  padding: 0;
-  margin: 0;
+@mixin clearSpace {
+    margin:0;
+    padding:0;
 }
 
-button {
-    background: none;
-    border: 0;
+@mixin panel($normalColor, $hoverColor) {
+    & {
+        background-color:$normalColor;
+    }
+    &:hover {
+        background-color:$hoverColor;
+    }
 }
 
-button:focus {
-    outline: 0;
-    box-shadow: none;
-}
-
-.header,
-.footer {
-  padding: 0;
-}
-
-.header {
-    display: inline-flex;
-    width: 100%;
-    background-color: #666;
-    color: #ffffff;
-    padding: 0.1em 0;
-}
-#signalPanel {
-    padding-right: 38%;
-    padding-left: 1%; 
-}
-
-#signalPanel ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: inline-flex;
-}
-
-#signalPanel ul li {
-    width: 1.8em;
-    height: 1.8em;
-    margin: 0.1em;
-    background-color: #ffffff;
-    border-radius: 1em;
-}
-
-#hourPanel {
-    font-size: 2em;
-}
-.teclado {
-    width: 100%;
-    height: 90vh;
-}
-
-.init {
+@mixin flexPanel($width, $height, $padding, $margin ) {
     display: -webkit-box;
     display: -moz-box;
     display: -webkit-flex;
@@ -81,9 +40,61 @@ button:focus {
     -moz-box-align: stretch;
     -webkit-align-items: stretch;
     align-items: stretch;
+    width: $width;
+    height: $height;
+    padding: $padding;
+}
+
+* {
+    @include clearSpace;
+}
+
+button {
+    background: none;
+    border: 0;
+}
+
+button:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.header {
+    display: inline-flex;
     width: 100%;
-    height: 97%;
-    padding-top: 3%;
+    background-color: #666;
+    color: #ffffff;
+    padding: 0.1em 0;
+}
+
+#signalPanel {
+    padding-right: 38%;
+    padding-left: 1%; 
+    ul {
+        @include clearSpace;
+        list-style: none;
+        display: inline-flex;
+        li {
+            width: 1.8em;
+            height: 1.8em;
+            margin: 0.1em;
+            background-color: #ffffff;
+            border-radius: 1em;
+        }
+
+    }
+}
+
+#hourPanel {
+    font-size: 2em;
+}
+.teclado {
+    width: 100%;
+    height: 90vh;
+}
+
+.init {
+    @include flexPanel(100%,97%,3%,0);
 }
 
 .Panel {
@@ -105,10 +116,6 @@ button:focus {
     transition: all 1s ease-in;
 }
 
-.greenPanel {
-    background-color: green;
-}
-
 .Panel .name>p{
     margin:0.3em 0;
 }
@@ -122,38 +129,26 @@ button:focus {
     float: right;
 }
 
-.greenPanel:hover {
-    background-color: black;
-}
-
 .Panel:hover .iconPanel>img {
     transition: all 0.2s ease-out;
     width:2.1em;
     height:2.1em;
 }
 
-.orangePanel {
-    background-color: orange;
+.greenPanel {
+    @include panel(green,black);
 }
 
-.orangePanel:hover {
-    background-color: black;
+.orangePanel {
+    @include panel(orange,black);
 }
 
 .redPanel {
-    background-color: red;
-}
-
-.redPanel:hover {
-    background-color: black;
+    @include panel(red,black);
 }
 
 .bluePanel {
-    background-color: blue;
-}
-
-.bluePanel:hover {
-    background-color: black;
+    @include panel(blue,black); 
 }
 
 /* Llamadas views*/
@@ -326,7 +321,6 @@ button:focus {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-
     -webkit-flex-flow: row wrap;
     justify-content: space-around;
 }
@@ -361,32 +355,9 @@ button:focus {
 }
 
 .initLlamando {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-direction: normal;
-    -moz-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -moz-box-pack: justify;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-    -webkit-align-content: stretch;
-    align-content: stretch;
-    -webkit-box-align: stretch;
-    -moz-box-align: stretch;
-    -webkit-align-items: stretch;
-    align-items: stretch;
-    padding-left: 20%;
-    width: 60%;
-    height: 97%;
+    @include flexPanel(60%,97%,0% 0% 0% 20%,0%);
 }
+
 .llamando .pantalla {
     margin: 2% 12%;
 }
