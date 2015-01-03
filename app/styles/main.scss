@@ -49,6 +49,10 @@
     @include clearSpace;
 }
 
+*::selection {
+    background:transparent;
+}
+
 button {
     background: none;
     border: 0;
