@@ -8,10 +8,11 @@
  * Controller of the smartPointViewsApp
  */
 angular.module('smartPointViewsApp')
-  .controller('LlamadaLlamandoCtrl', function ($scope,$routeParams,$log,$interval) {
+  .controller('LlamadaLlamandoCtrl', function ($scope,$stateParams,$log,$interval) {
     $scope.tiempo=60;
     var alto;
-    $scope.numero = $routeParams.numero;
+    $scope.numero = $stateParams.numero;
+    $log.debug($stateParams);
     $scope.contar = function(){
         if ( angular.isDefined(alto) ) return;
 
