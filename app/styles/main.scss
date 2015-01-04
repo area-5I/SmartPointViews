@@ -90,15 +90,22 @@ button:focus {
 }
 
 #hourPanel {
-    font-size: 2em;
+    font-size: 3em;
+}
+.telefono {
+    width: 85%;
+    height: 90vh;
+    margin-top:3%;
+    margin-left:15%;
+    margin-right:15%;
 }
 .teclado {
     width: 100%;
-    height: 90vh;
+    height: 100%;
 }
 
 .init {
-    @include flexPanel(100%,97%,3%,0);
+    @include flexPanel(90%,97%,0%,0);
 }
 
 .Panel {
@@ -110,11 +117,11 @@ button:focus {
     flex: 0 1 auto;
     -webkit-align-self: stretch;
     align-self: stretch;
-    margin: 2% 15%;
+    margin: 2% 1%;
     padding: 2% 5%;
     color: #ffffff;
-    border-radius: 1em;
-    font-size: 2.5em;
+    border-radius: 0.5em;
+    font-size: 4em;
     text-decoration: none;
     display: inline-flex;
     transition: all 1s ease-in;
