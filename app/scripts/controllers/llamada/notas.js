@@ -49,17 +49,4 @@ angular.module('smartPointViewsApp')
       $scope.borrar = function(){
         $scope.miTexto=$scope.miTexto.substr(0, $scope.miTexto.length - 1) 
       };
-
-      $scope.space = function(){
-        $scope.miTexto += " "; 
-      };
-
-      $scope.teclarreturn = function(){
-          $scope.miTexto += "\n";
-      };
-
-      $scope.tab=function(){
-        $scope.miTexto += "\t";
-      };
-
-  });
+});
