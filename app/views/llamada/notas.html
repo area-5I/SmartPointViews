@@ -1,0 +1,57 @@
+<textarea id="write" rows="6" cols="60"></textarea>
+    <ul id="keyboard">
+        <li ng-click="teclar('`','~')" class="symbol"><span ng-show="shiftActivado" >`</span><span ng-hide="shiftActivado">~</span></li>
+        <li ng-click="teclar(1,'!')" class="symbol"><span ng-show="shiftActivado">1</span><span ng-hide="shiftActivado">!</span></li>
+        <li ng-click="teclar(2,'@')" class="symbol"><span ng-show="shiftActivado">2</span><span ng-hide="shiftActivado">@</span></li>
+        <li ng-click="teclar(3,'#')" class="symbol"><span ng-show="shiftActivado">3</span><span ng-hide="shiftActivado">#</span></li>
+        <li ng-click="teclar(4,'$')" class="symbol"><span ng-show="shiftActivado">4</span><span ng-hide="shiftActivado">$</span></li>
+        <li ng-click="teclar(5,'%')" class="symbol"><span ng-show="shiftActivado">5</span><span ng-hide="shiftActivado">%</span></li>
+        <li ng-click="teclar(6,'^')" class="symbol"><span ng-show="shiftActivado">6</span><span ng-hide="shiftActivado">^</span></li>
+        <li ng-click="teclar(7,'&')" class="symbol"><span ng-show="shiftActivado">7</span><span ng-hide="shiftActivado">&amp;</span></li>
+        <li ng-click="teclar(8,'*')" class="symbol"><span ng-show="shiftActivado">8</span><span ng-hide="shiftActivado">*</span></li>
+        <li ng-click="teclar(9,'(')" class="symbol"><span ng-show="shiftActivado">9</span><span ng-hide="shiftActivado">(</span></li>
+        <li ng-click="teclar(0,')')" class="symbol"><span ng-show="shiftActivado">0</span><span ng-hide="shiftActivado">)</span></li>
+        <li ng-click="teclar('-','_')" class="symbol"><span ng-show="shiftActivado">-</span><span ng-hide="shiftActivado">_</span></li>
+        <li ng-click="teclar('=','+')" class="symbol"><span ng-show="shiftActivado">=</span><span ng-hide="shiftActivado">+</span></li>
+        <li ng-click="borrar()" class="delete lastitem">delete</li>
+        <li ng-click="teclar('\t')" class="tab">tab</li>
+        <li ng-click="teclar('q')" class="letter">q</li>
+        <li ng-click="teclar('w')" class="letter">w</li>
+        <li ng-click="teclar('e')" class="letter">e</li>
+        <li ng-click="teclar('r')" class="letter">r</li>
+        <li ng-click="teclar('t')" class="letter">t</li>
+        <li ng-click="teclar('y')" class="letter">y</li>
+        <li ng-click="teclar('u')" class="letter">u</li>
+        <li ng-click="teclar('i')" class="letter">i</li>
+        <li ng-click="teclar('o')" class="letter">o</li>
+        <li ng-click="teclar('p')" class="letter">p</li>
+        <li ng-click="teclar('[','{')" class="symbol"><span ng-show="shiftActivado">[</span><span ng-hide="shiftActivado">{</span></li>
+        <li ng-click="teclar(']','}')" class="symbol"><span ng-show="shiftActivado">]</span><span ng-hide="shiftActivado">}</span></li>
+        <li ng-click="teclar('\','|')" class="symbol lastitem"><span ng-show="shiftActivado">\</span><span ng-hide="shiftActivado">|</span></li>
+        <li ng-click="capslock()" class="capslock">caps lock</li>
+        <li ng-click="teclar('a')" class="letter">a</li>
+        <li ng-click="teclar('s')" class="letter">s</li>
+        <li ng-click="teclar('d')" class="letter">d</li>
+        <li ng-click="teclar('f')" class="letter">f</li>
+        <li ng-click="teclar('g')" class="letter">g</li>
+        <li ng-click="teclar('h')" class="letter">h</li>
+        <li ng-click="teclar('j')" class="letter">j</li>
+        <li ng-click="teclar('k')" class="letter">k</li>
+        <li ng-click="teclar('l')" class="letter">l</li>
+        <li ng-click="teclar(';',':')" class="symbol"><span ng-show="shiftActivado">;</span><span ng-hide="shiftActivado">:</span></li>
+        <li ng-click="teclar('\'','\"')" class="symbol"><span ng-show="shiftActivado">'</span><span ng-hide="shiftActivado">&quot;</span></li>
+        <li ng-click="teclarreturn()" class="return lastitem">return</li>
+        <li ng-click="shift()" class="left-shift">shift</li>
+        <li ng-click="teclar('z')" class="letter">z</li>
+        <li ng-click="teclar('x')" class="letter">x</li>
+        <li ng-click="teclar('c')" class="letter">c</li>
+        <li ng-click="teclar('v')" class="letter">v</li>
+        <li ng-click="teclar('b')" class="letter">b</li>
+        <li ng-click="teclar('n')" class="letter">n</li>
+        <li ng-click="teclar('m')" class="letter">m</li>
+        <li ng-click="teclar(',','<')" class="symbol"><span ng-show="shiftActivado">,</span><span ng-hide="shiftActivado">&lt;</span></li>
+        <li ng-click="teclar('.','>')" class="symbol"><span ng-show="shiftActivado">.</span><span ng-hide="shiftActivado">&gt;</span></li>
+        <li ng-click="teclar('/','?')" class="symbol"><span ng-show="shiftActivado">/</span><span ng-hide="shiftActivado">?</span></li>
+        <li ng-click="shift()" class="right-shift lastitem">shift</li>
+        <li ng-click="space('  ')" class="space lastitem">&nbsp;</li>
+    </ul>

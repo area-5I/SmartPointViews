@@ -49,6 +49,10 @@
     @include clearSpace;
 }
 
+body {
+    font: 71%/1.5 Verdana, Sans-Serif;
+}
+
 *::selection {
     background:transparent;
 }
@@ -92,16 +96,15 @@ button:focus {
 #hourPanel {
     font-size: 3em;
 }
+
 .telefono {
+    height:100%;
+    width:100%;
+}
+
+.teclado {
     width: 85%;
     height: 90vh;
-    margin-top:3%;
-    margin-left:15%;
-    margin-right:15%;
-}
-.teclado {
-    width: 100%;
-    height: 100%;
 }
 
 .init {
@@ -117,7 +120,7 @@ button:focus {
     flex: 0 1 auto;
     -webkit-align-self: stretch;
     align-self: stretch;
-    margin: 2% 1%;
+    margin: 2% 15%;
     padding: 2% 5%;
     color: #ffffff;
     border-radius: 0.5em;
@@ -163,9 +166,12 @@ button:focus {
 }
 
 /* Llamadas views*/
+.teclado {
+    margin: 2% 5%;
+}
 
 .pantalla {
-    width: 75%;
+    width: 100%;
     height: 15%;
     border: 0.2em solid;
     border-radius: 3em;
@@ -218,7 +224,7 @@ button:focus {
 
 .cuerpo {
     display: inline-flex;
-    width: 80%;
+    width: 100%;
     height: 60%;
 }
 
@@ -301,7 +307,7 @@ button:focus {
 }
 
 .llamar {
-    width: 50%;
+    width: 80%;
     height: 13%;
     margin-left: 10%;
 }
@@ -384,4 +390,74 @@ button:focus {
     margin:0 0.2em;
     width:4em;
     height:2em;
+}
+
+//Notas views
+
+
+#write {
+margin: 0 0 5px;
+padding: 5px;
+width: 671px;
+height: 200px;
+font: 1em/1.5 Verdana, Sans-Serif;
+background: #fff;
+border: 1px solid #f9f9f9;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+}
+#keyboard {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+#keyboard li {
+float: left;
+margin: 0 5px 5px 0;
+width: 40px;
+height: 40px;
+line-height: 40px;
+text-align: center;
+background: #fff;
+border: 1px solid #f9f9f9;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+}
+.capslock, .tab, .left-shift {
+clear: left;
+}
+#keyboard .tab, #keyboard .delete {
+width: 70px;
+}
+#keyboard .capslock {
+width: 80px;
+}
+#keyboard .return {
+width: 77px;
+}
+#keyboard .left-shift {
+width: 95px;
+}
+#keyboard .right-shift {
+width: 109px;
+}
+.lastitem {
+margin-right: 0;
+}
+.uppercase {
+text-transform: uppercase;
+}
+#keyboard .space {
+clear: left;
+width: 681px;
+}
+.on {
+display: none;
+}
+#keyboard li:hover {
+position: relative;
+top: 1px;
+left: 1px;
+border-color: #e5e5e5;
+cursor: pointer;
 }
