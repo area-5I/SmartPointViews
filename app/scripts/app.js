@@ -69,4 +69,17 @@ angular
         url:'/hextris',
         templateUrl: 'views/llamada/hextris.html'
       });
-  });
+  })
+    .service('changeColorHeader', function ($log) {
+        var property = "inicioHeader";
+
+        return {
+            getColor:function () {
+                return property;
+            },
+            setColor:function (value) {
+                property = value;
+                $log.debug(property);
+            }
+        };
+    });

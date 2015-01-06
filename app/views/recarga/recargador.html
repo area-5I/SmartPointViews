@@ -1,4 +1,4 @@
-<h1>{{empresaId}}</h1>
+<h1 class="idEmpresa">{{empresaId}}</h1>
 <div class="teclado">
     <div class="pantalla">
         <input type="text" ng-model="numero">
@@ -50,6 +50,6 @@
         </div>
     <div class="recargar">
         <button type="submit" ng-click="llamarNumero()"><img src="../images/menu/auricular.svg"/></button>
-        <button class="atras" href="#/"><img src="../images/otros/atras.svg"/></button>
+        <button class="atras" ui-sref="recarga"><img src="../images/otros/atras.svg"/></button>
     </div>
 </div>

@@ -78,10 +78,29 @@ button:focus {
     box-shadow: none;
 }
 
+.emergenciaHeader {
+    background-color: #e41f25;
+}
+
+.ayudaHeader {
+    background-color:#0974ba;
+}
+
+.llamadasHeader {
+    background-color:#009d45;
+}
+
+.recargasHeader {
+    background-color:#ec6a34;
+}
+
+.inicioHeader {
+    background-color:#696a6a;
+}
+
 .header {
     display: inline-flex;
     width: 100%;
-    background-color: #666;
     color: #ffffff;
     padding: 0.1em 0;
 }
@@ -158,22 +177,23 @@ button:focus {
 }
 
 .greenPanel {
-    @include panel(green,black);
+    @include panel(#009d45,black);
 }
 
 .orangePanel {
-    @include panel(orange,black);
+    @include panel(#ec6a34,black);
 }
 
 .redPanel {
-    @include panel(red,black);
+    @include panel(#e41f25,black);
 }
 
 .bluePanel {
-    @include panel(blue,black); 
+    @include panel(#0974ba,black); 
 }
 
 /* Llamadas views*/
+$buttonGreen:#009d45;
 .teclado {
     width: 85%;
     height: 99%;
@@ -224,7 +244,7 @@ button:focus {
     padding: 0.2em 0.2em;
     font-size: 2.3em;
     order:2;
-    border:0.1em solid green;
+    border:0.1em solid $buttonGreen;
     border-radius: 2em;
     flex: 1 0 auto;
     text-align:center;
@@ -252,7 +272,7 @@ button:focus {
 }
 
 .tecla {
-    background-color: green;
+    background-color: $buttonGreen;
     color: white;
     width: 23%;
     height: 20%;
@@ -286,7 +306,7 @@ button:focus {
     margin-top: 30%;
     width: 80%;
     height: 10%;
-    background-color: green;
+    background-color: $buttonGreen;
 
 }
 
@@ -299,7 +319,7 @@ button:focus {
     padding: 1.3em 1.5em;
     color: white;
     display: inline;
-    background-color: green;
+    background-color: $buttonGreen;
     border-radius: 3em;
     margin-left:1em;
 }
@@ -307,7 +327,7 @@ button:focus {
 .opciones .dinero .letraGreen {
     display: inline;
     font-size: 3em;
-    color: green;
+    color: $buttonGreen;
 }
 
 .opciones .atras {
@@ -315,7 +335,7 @@ button:focus {
     height: 17%;
     border-radius: 100%;
     text-align: center;
-    background-color: green;
+    background-color: $buttonGreen;
     margin-bottom: 30%;
 }
 
@@ -335,7 +355,7 @@ button:focus {
     width: 100%;
     height: 100%;
     border-radius: 6em;
-    background-color: green;
+    background-color: $buttonGreen;
 }
 
 .llamar>button>img {
@@ -386,7 +406,7 @@ button:focus {
     padding: 5px;
     width: 100%;
     height: 50%;
-    font: 2em/1.5 Verdana, Sans-Serif;
+    font-size: 3em;
     background: #fff;
     border: 0.1em solid #f9f9f9;
     box-shadow:1em 1em 1em #f9f9f9;
@@ -451,7 +471,7 @@ button:focus {
     height:6%;
     border-radius: 3em;
     margin:0% 10%;
-    background-color: green;
+    background-color: $buttonGreen;
     text-align: center;
     color: #fff;
     font-size:4em;
@@ -495,11 +515,12 @@ button:focus {
         width: 4em;
         height: 4em;
         svg {
-            fill:green;
+            fill:$buttonGreen;
         }
     }
 }
 //views of recargas
+$buttonOrange:#ec6a34;
 .empresas {
     width:100%;
     height:100%;
@@ -518,15 +539,13 @@ button:focus {
     margin: 2%;
     font-size: 6.5em;
     text-align: center;
-    background-color: orange;
     border-radius: 50%;
     transition: all 1s ease;
 }
 
 .circlePanel:hover {
-    width: 36%;
-    height: 21%;
-    background-color: black;
+    width: 43%;
+    height: 36%;
 }
 
 .circlePanel>img {
@@ -542,6 +561,14 @@ button:focus {
 }
 
 //recargar view
+.idEmpresa {
+    position:absolute;
+    top:0;
+    right:0.5em;
+    font-size:3.5em;
+    color:white;
+    text-transform:uppercase;
+}
 
 .opcionesRecargas {
     margin-left:18%;
@@ -552,7 +579,7 @@ button:focus {
         float:left;
         width:50%;
         height:100%;
-        background-color:orange;
+        background-color:$buttonOrange;
         border-radius:5em;
         p {
             font-size:3em;
@@ -572,14 +599,14 @@ button:focus {
             float:left;
             width: 52%;
             height:100%;
-            background-color:orange;
+            background-color:$buttonOrange;
             text-align:center;
             border-radius:50%;
             margin-right:0.5em;
         }
         .letraOrange {
             float: left;
-            color:orange;
+            color: $buttonOrange;
         }
     }
 
@@ -587,7 +614,7 @@ button:focus {
 .cuerpoRecarga {
     margin-left:10%;
     .tecla {
-        background-color:orange;
+        background-color:$buttonOrange;
     }
 
     .tecladito {
@@ -605,7 +632,7 @@ button:focus {
         height:100%;
         width:60%;
         border-radius: 5em;
-        background-color:orange;
+        background-color:$buttonOrange;
         img {
             width:$sizeLetter;
             height:$sizeLetter;
@@ -616,7 +643,7 @@ button:focus {
         border-radius:50%;
         width: 25%;
         height: 100%;
-        background-color:orange;
+        background-color:$buttonOrange;
         &>img {
             width:$sizeLetter;
             height:$sizeLetter;

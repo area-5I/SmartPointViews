@@ -8,10 +8,6 @@
  * Controller of the smartPointViewsApp
  */
 angular.module('smartPointViewsApp')
-  .controller('EmergenciaCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('EmergenciaCtrl', function ($scope,changeColorHeader) {
+    changeColorHeader.setColor("emergenciaHeader");
   });

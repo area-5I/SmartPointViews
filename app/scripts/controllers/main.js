@@ -8,5 +8,9 @@
  * Controller of the smartPointViewsApp
  */
 angular.module('smartPointViewsApp')
-  .controller('MainCtrl', function ($scope) {
-  });
+  .controller('MainCtrl', function ($scope,changeColorHeader,$log) {
+    changeColorHeader.setColor("inicioHeader");
+    $scope.headerColor = function() {
+        return changeColorHeader.getColor();
+    };
+});
