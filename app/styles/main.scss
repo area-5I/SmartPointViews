@@ -45,12 +45,17 @@
     padding: $padding;
 }
 
+@font-face {
+    font-family: Gothic;
+    src: url(font/gothic.ttf);
+}
+
 * {
     @include clearSpace;
 }
 
 body {
-    font: 71%/1.5 Verdana, Sans-Serif;
+    font: 71%/1.5 Gothic;
     height:100vh;
 }
 
@@ -338,8 +343,13 @@ button:focus {
     height: 6em;
 }
 //view llamando
+.subllamado {
+    width:100%;
+    height:90%;
+}
+
 .initLlamando {
-    @include flexPanel(75%,90%,0% 0% 0% 12%,0%);
+    @include flexPanel(75%,100%,0% 0% 0% 12%,0%);
 }
 .llamando {
     height:100%;
@@ -456,29 +466,60 @@ button:focus {
         margin:0.1em 2em;
     }
 }
-
+//view of juegos
+.juegos {
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
+}
+.juego {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    width: 50%;
+    height:20%;
+    font-size:4em;
+    color:black;
+    p {
+        margin-top: 1.3em;
+        float:left;
+        margin-left: 1em;
+    }
+    img {
+        float: left;
+        width: 4em;
+        height: 4em;
+        svg {
+            fill:green;
+        }
+    }
+}
 //views of recargas
 .empresas {
-    padding: 0;
-    margin: 5%;
+    width:100%;
+    height:100%;
     list-style: none;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
-    -webkit-flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
 }
 
 .circlePanel {
-    width: 35%;
-    height: 20%;
+    width: 42%;
+    height: 35%;
     margin: 2%;
-    font-size: 3em;
+    font-size: 6.5em;
     text-align: center;
     background-color: orange;
-    border-radius: 5em;
+    border-radius: 50%;
     transition: all 1s ease;
 }
 
