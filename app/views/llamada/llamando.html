@@ -7,35 +7,37 @@
         </div>
     </div>
     </div>
-    <div class="initLlamando" ui-view>
-        <a href="#/llamadas" class="greenPanel Panel">
-            <div class="name">
-                <p>Ubicacion</p>
-            </div>
-            <div class="iconPanel">
-                <img src="../images/interaccion/ubicacion.svg"/>
-            </div>
-        </a>
-        <a ui-sref=".notas" class="greenPanel Panel">
-            <div class="name">
-                <p>Notas</p>
-            </div>
-            <div class="iconPanel">
-                <img src="../images/interaccion/notas.svg"/>
-            </div>
-        </a>
-        <a href="#/emergencia" class="greenPanel Panel">
-            <div class="name">
-                <p>Juegos</p>
-            </div>
-            <div class="iconPanel">
-                <img src="../images/interaccion/juegos.svg"/>
-            </div>
-        </a>
-        <a href="#/emergencia" class="redPanel Panel colgarPanel">
-            <div class="iconPanel">
-                <img src="../images/otros/colgar.svg"/>
-            </div>
-        </a>
+    <div class="subllamado" ui-view>
+        <div class="initLlamando">
+            <a href="#/llamadas" class="greenPanel Panel">
+                <div class="name">
+                    <p>Ubicacion</p>
+                </div>
+                <div class="iconPanel">
+                    <img src="../images/interaccion/ubicacion.svg"/>
+                </div>
+            </a>
+            <a ui-sref=".notas" class="greenPanel Panel">
+                <div class="name">
+                    <p>Notas</p>
+                </div>
+                <div class="iconPanel">
+                    <img src="../images/interaccion/notas.svg"/>
+                </div>
+            </a>
+            <a ui-sref=".juegos" class="greenPanel Panel">
+                <div class="name">
+                    <p>Juegos</p>
+                </div>
+                <div class="iconPanel">
+                    <img src="../images/interaccion/juegos.svg"/>
+                </div>
+            </a>
+            <a href="#/emergencia" class="redPanel Panel colgarPanel">
+                <div class="iconPanel">
+                    <img src="../images/otros/colgar.svg"/>
+                </div>
+            </a>
+        </div>
     </div>
 </div>

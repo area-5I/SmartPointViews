@@ -13,6 +13,7 @@ angular
     'ui.router'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
+
     $urlRouterProvider.otherwise('/home');
     $stateProvider
       .state('home', {
@@ -56,8 +57,16 @@ angular
         controller: 'LlamadaLlamandoCtrl'
       })
       .state('llamando.notas', {
-        url:'/llamada/llamando/:numero',
+        url:'/notas',
         templateUrl: 'views/llamada/notas.html',
         controller: 'LlamadaNotasCtrl'
+      })
+      .state('llamando.juegos', {
+        url:'/juegos',
+        templateUrl: 'views/llamada/juegos.html'
+      })
+      .state('llamando.hextris', {
+        url:'/hextris',
+        templateUrl: 'views/llamada/hextris.html'
       });
   });
