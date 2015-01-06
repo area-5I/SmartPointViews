@@ -47,7 +47,7 @@ angular
         controller: 'AyudaCtrl'
       })
       .state('recarga.recargador', {
-        url:'/recarga/recargador/:empresaId',
+        url:'/:empresaId',
         templateUrl: 'views/recarga/recargador.html',
         controller: 'RecargaRecargadorCtrl'
       })

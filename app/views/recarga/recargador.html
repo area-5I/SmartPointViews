@@ -1,3 +1,55 @@
-<p>This is the recarga/recargador view.</p>
-<p>{{empresaId}}</p>
-<a href="#/recarga">atras</a>
+<h1>{{empresaId}}</h1>
+<div class="teclado">
+    <div class="pantalla">
+        <input type="text" ng-model="numero">
+        <button ng-click="borrar()"><img src="../images/otros/borrar.svg"/></button>
+    </div>
+    <div class="opcionesRecargas">
+        <div class="entrada"><p>SALDO DISPONIBLE</p></div>
+        <div class="dinero"><p class="moneda">0</p><p class="letraOrange">Bs.</p></div>
+    </div>
+    <div class="cuerpoRecarga">
+    <ul class="tecladito">
+            <li class="tecla" ng-click="marcar(1)">
+                <p>1</p>
+            </li>
+            <li class="tecla" ng-click="marcar(2)">
+                <p>2</p>
+            </li>
+            <li class="tecla" ng-click="marcar(3)">
+                <p>3</p>
+            </li>
+            <li class="tecla" ng-click="marcar(4)">
+                <p>4</p>
+            </li>
+            <li class="tecla" ng-click="marcar(5)">
+                <p>5</p>
+            </li>
+            <li class="tecla" ng-click="marcar(6)">
+                <p>6</p>
+            </li>
+            <li class="tecla" ng-click="marcar(7)">
+                <p>7</p>
+            </li>
+            <li class="tecla" ng-click="marcar(8)">
+                <p>8</p>
+            </li>
+            <li class="tecla" ng-click="marcar(9)">
+                <p>9</p>
+            </li>
+            <li class="tecla" ng-click="marcar('*')">
+                <p>*</p>
+            </li>
+            <li class="tecla" ng-click="marcar(0)">
+                <p>0</p>
+            </li>
+            <li class="tecla" ng-click="marcar('#')">
+                <p>#</p>
+            </li>
+        </ul>
+        </div>
+    <div class="recargar">
+        <button type="submit" ng-click="llamarNumero()"><img src="../images/menu/auricular.svg"/></button>
+        <button class="atras" href="#/"><img src="../images/otros/atras.svg"/></button>
+    </div>
+</div>

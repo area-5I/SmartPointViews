@@ -540,3 +540,86 @@ button:focus {
     width: 3em;
     height: 3em;
 }
+
+//recargar view
+
+.opcionesRecargas {
+    margin-left:18%;
+    width:80%;
+    height:12%;
+    color:white;
+    .entrada {
+        float:left;
+        width:50%;
+        height:100%;
+        background-color:orange;
+        border-radius:5em;
+        p {
+            font-size:3em;
+            margin:0; 
+            line-height:3.7em;
+            text-align:center;
+        }
+    }
+    .dinero {
+        margin-left:7%;
+        float:left;
+        width:40%;
+        height:100%;
+        font-size:5em;
+        line-height:2.5em;
+        .moneda {
+            float:left;
+            width: 52%;
+            height:100%;
+            background-color:orange;
+            text-align:center;
+            border-radius:50%;
+            margin-right:0.5em;
+        }
+        .letraOrange {
+            float: left;
+            color:orange;
+        }
+    }
+
+}
+.cuerpoRecarga {
+    margin-left:10%;
+    .tecla {
+        background-color:orange;
+    }
+
+    .tecladito {
+        width:90%;
+    }
+    width:80%;
+    height:62%;
+}
+.recargar {
+    $sizeLetter:6em;
+    margin-left:18%;
+    width:70%;
+    height:12%;
+    &>button {
+        height:100%;
+        width:60%;
+        border-radius: 5em;
+        background-color:orange;
+        img {
+            width:$sizeLetter;
+            height:$sizeLetter;
+        }
+    }
+    &>.atras {
+        margin-left:7%;
+        border-radius:50%;
+        width: 25%;
+        height: 100%;
+        background-color:orange;
+        &>img {
+            width:$sizeLetter;
+            height:$sizeLetter;
+        }
+    }
+}

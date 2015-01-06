@@ -8,7 +8,7 @@
  * Controller of the smartPointViewsApp
  */
 angular.module('smartPointViewsApp')
-  .controller('RecargaRecargadorCtrl', function ($scope,$routeParams) {
+  .controller('RecargaRecargadorCtrl', function ($scope,$stateParams) {
 
-      $scope.empresaId = $routeParams.empresaId;
+      $scope.empresaId = $stateParams.empresaId;
   });
