@@ -17,29 +17,21 @@
     }
 }
 
-@mixin flexPanel($width, $height, $padding, $margin ) {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-direction: normal;
-    -moz-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -moz-box-pack: justify;
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
-    -webkit-align-content: stretch;
-    align-content: stretch;
-    -webkit-box-align: stretch;
-    -moz-box-align: stretch;
-    -webkit-align-items: stretch;
-    align-items: stretch;
+@mixin flexPanel($display,$direction,$wrap,$justify,$content,$items,$width, $height, $padding, $margin) {
+    display: -webkit-$display;
+    display: $display;
+    -webkit-flex-direction: $direction;
+    flex-direction: $direction;
+    -webkit-flex-wrap: $wrap;
+    flex-wrap: $wrap;
+    -webkit-justify-content: $justify;
+    justify-content: $justify;
+    -webkit-align-content: $content;
+    align-content: $content;
+    -webkit-box-align: $items;
+    -moz-box-align: $items;
+    -webkit-align-items: $items;
+    align-items: $items;
     width: $width;
     height: $height;
     padding: $padding;
@@ -103,6 +95,7 @@ button:focus {
     width: 100%;
     color: #ffffff;
     padding: 0.1em 0;
+    transition: background-color 500ms linear;
 }
 
 #signalPanel {
@@ -133,7 +126,32 @@ button:focus {
 }
 
 .init {
-    @include flexPanel(100%,100%,0%,0);
+    @include flexPanel(flex,column,wrap,space-around,stretch,stretch,100%,100%,0%,0);
+    transition: all 4s ease-in;
+}
+
+.initReposo {
+    @include flexPanel(inline-flex,row,wrap,space-around,stretch,stretch,100%,12%,100% 0% 0% 0%,0);
+    .Panel {
+        height:100%;
+        margin:0;
+        padding: 0.2em 0.8em;
+        &:hover {
+            transform:translateY(-0.1em);
+            .iconPanel>img {
+                width:1.5em;
+                height:1.5em;
+            }
+        }
+        .name {
+            display:none;
+        }
+        .iconPanel>img {
+            float:none;
+            width:1.5em;
+            height:1.5em;
+        }
+    }
 }
 
 .Panel {
@@ -153,7 +171,7 @@ button:focus {
     font-size: 6em;
     text-decoration: none;
     display: inline-flex;
-    transition: all 1s ease-in;
+    transition: all 4s linear;
 }
 
 .Panel .name>p{
@@ -369,7 +387,7 @@ $buttonGreen:#009d45;
 }
 
 .initLlamando {
-    @include flexPanel(75%,100%,0% 0% 0% 12%,0%);
+    @include flexPanel(flex,column,wrap,space-around,stretch,stretch,75%,100%,0% 0% 0% 12%,0%);
 }
 .llamando {
     height:100%;
