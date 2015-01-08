@@ -124,10 +124,53 @@ button:focus {
     height:90%;
     width:100%;
 }
+//-----------------------------
+@keyframes slideOutLeft {
+to      { transform: translateX(-200%); }
+}
+@-moz-keyframes slideOutLeft {  
+to      { -moz-transform: translateX(-200%); }
+}
+@-webkit-keyframes slideOutLeft {
+to      { -webkit-transform: translateX(-200%); }
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+from    { transform:translateX(200%); }
+to      { transform: translateX(0); }
+}
+@-moz-keyframes slideInRight {
+from    { -moz-transform:translateX(200%); }
+to      { -moz-transform: translateX(0); }
+}
+@-webkit-keyframes slideInRight {
+from    { -webkit-transform:translateX(200%); }
+to      { -webkit-transform: translateX(0); }
+}
+#transitiones.ng-enter,
+#transitiones.ng-leave      { position:absolute; left:30px; right:30px;
+transition:0.5s all ease; -moz-transition:0.5s all ease; -webkit-transition:0.5s all ease; 
+}
+
+/* enter animation */
+#transitiones.ng-enter            { 
+-webkit-animation:slideInRight 0.5s both ease;
+-moz-animation:slideInRight 0.5s both ease;
+animation:slideInRight 0.5s both ease; 
+}
+
+/* leave animation */
+#transitiones.ng-leave            { 
+-webkit-animation:slideOutLeft 0.5s both ease;
+-moz-animation:slideOutLeft 0.5s both ease;
+animation:slideOutLeft 0.5s both ease;   
+}
+//-----------------------------
 
 .init {
     @include flexPanel(flex,column,wrap,space-around,stretch,stretch,100%,100%,0%,0);
-    transition: all 4s ease-in;
+    transition: all 1s linear;
 }
 
 .initReposo {

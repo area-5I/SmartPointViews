@@ -10,6 +10,7 @@
  */
 angular
   .module('smartPointViewsApp', [
+    'ngAnimate',
     'ui.router'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
