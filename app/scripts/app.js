@@ -42,6 +42,11 @@ angular
         templateUrl: 'views/emergencia.html',
         controller: 'EmergenciaCtrl'
       })
+      .state('emergencia.llamando', {
+        url:'/llamando/:tipoEmergencia',
+        templateUrl: 'views/emergencia/llamando.html',
+        controller: 'EmergenciaLlamandoCtrl'
+      })
       .state('ayuda', {
         url:'/ayuda',
         templateUrl: 'views/ayuda.html',

@@ -37,6 +37,20 @@
     padding: $padding;
 }
 
+@mixin flexChild($order,$flex,$align,$height,$margin,$padding) {
+    -webkit-box-ordinal-group: $order;
+    -webkit-order: $order;
+    order: $order;
+    -webkit-box-flex: 0;
+    -webkit-flex: $flex;
+    flex: $flex;
+    -webkit-align-self: $align;
+    align-self: $align;
+    height:$height;
+    margin: $margin;
+    padding: $padding;
+}
+
 @font-face {
     font-family: Gothic;
     src: url(font/gothic.ttf);
@@ -198,17 +212,7 @@ animation:slideOutLeft 0.5s both ease;
 }
 
 .Panel {
-    -webkit-box-ordinal-group: 1;
-    -webkit-order: 1;
-    order: 1;
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 1 auto;
-    flex: 0 1 auto;
-    -webkit-align-self: stretch;
-    align-self: stretch;
-    height:15%;
-    margin: 2% 15%;
-    padding: 2% 5%;
+    @include flexChild(1,0 1 auto,stretch,15%,2% 15%, 2% 5%);
     color: #ffffff;
     border-radius: 0.5em;
     font-size: 6em;
@@ -713,6 +717,10 @@ $buttonOrange:#ec6a34;
 }
 
 //emergencias view
+.emergenciaView {
+    width:100%;
+    height:100%;
+}
 
 .initEmergencia {
     @include flexPanel(flex,column,wrap,space-around,stretch,stretch,100%,70%,15% 0% 0% 0%,0);
@@ -735,5 +743,83 @@ $buttonOrange:#ec6a34;
             height: 60%;
             margin: 5%;
         }
+    }
+}
+//emergencias llamandoEmergencia
+@keyframes cambioColor {
+    0%,100% {
+        background-color:#e41f25;
+    }
+    50% {
+        background-color:#009d45;
+    }
+}
+@-webkit-keyframes cambioColor {
+    0%,25%,75%,100% {
+        background-color:#e41f25;
+    }
+    50% {
+        background-color:#009d45;
+    }
+}
+
+.llamandoEmergencia {
+    @include flexPanel(flex,column,wrap,space-around,stretch,stretch,70%,100%,8% 0% 0% 15%,0);
+    font-size: 4em;
+    .textLlamada {
+        @include flexChild(1,0 1 auto,stretch,5%,0,0);
+    }
+    .Panel {
+        font-size:1.5em;
+        height:15%;
+        width:100%;
+        margin:0;
+    }
+    .privadoEmergencia {
+        @include flexChild(1,0 1 auto,stretch,40%,0,0);
+        &>ul li {
+            position:relative;
+            list-style:none;
+            border-bottom:0.05em red solid;
+            padding-top: 0.5em;
+            .principalPrivado {
+                .nombrePrivado {margin-left:0.2em;display:inline-block;transform: translateY(-22%);}
+                img {
+                    position:relative;
+                    margin-top:0.2em;
+                    width:1em;
+                    height:1em;
+                    background-color:#e41f25;
+                    padding: 0.2em;
+                    border-radius:0.2em;
+                    animation:4s cambioColor infinite;
+                }
+            }
+            .nombrePrivado { margin:0;display:inline-block;}
+            .adicionalPrivado {
+                display:none;
+                transition:all 3s linear;
+                color:#fff;
+                background-color:#e41f25;
+                font-size:0.6em;
+                .telefonoPrivado{display:inline-block;}
+                .direccionPrivado{ display:inline-block;}
+            } 
+        }
+        &>ul li:hover {
+            .adicionalPrivado {
+                display:block;
+            }
+        }
+    
+    }
+    .emergenciaColgar {
+        @include flexChild(1,0 1 auto,stretch,11%,0 auto,0);
+       width: 35%;
+       border-radius:3em;
+       img {
+            width:16em;
+            height:9em;
+       }
     }
 }
