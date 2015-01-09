@@ -113,7 +113,7 @@ button:focus {
 }
 
 #signalPanel {
-    padding-right: 38%;
+    padding-right: 26%;
     padding-left: 1%; 
     ul {
         @include clearSpace;
@@ -767,16 +767,19 @@ $buttonOrange:#ec6a34;
     @include flexPanel(flex,column,wrap,space-around,stretch,stretch,70%,100%,8% 0% 0% 15%,0);
     font-size: 4em;
     .textLlamada {
-        @include flexChild(1,0 1 auto,stretch,5%,0,0);
+        margin-bottom:0;
+        position:absolute;
+        transform:translateY(-1.4em);
     }
     .Panel {
         font-size:1.5em;
         height:15%;
         width:100%;
         margin:0;
+        text-transform:uppercase;
     }
     .privadoEmergencia {
-        @include flexChild(1,0 1 auto,stretch,40%,0,0);
+        @include flexChild(1,0 1 auto,stretch,40%,0% 0% 0% 4%,0);
         &>ul li {
             position:relative;
             list-style:none;
@@ -794,16 +797,20 @@ $buttonOrange:#ec6a34;
                     border-radius:0.2em;
                     animation:4s cambioColor infinite;
                 }
+                .rightIcon {
+                    float:right;
+                    margin-top: 0.5em;
+                    color:#e41f25;
+                }
             }
-            .nombrePrivado { margin:0;display:inline-block;}
             .adicionalPrivado {
                 display:none;
                 transition:all 3s linear;
                 color:#fff;
                 background-color:#e41f25;
                 font-size:0.6em;
-                .telefonoPrivado{display:inline-block;}
-                .direccionPrivado{ display:inline-block;}
+                .telefonoPrivado{display:inline-block;margin-left:2em;}
+                .direccionPrivado{ display:inline-block; float:right; margin-right:2em;}
             } 
         }
         &>ul li:hover {
