@@ -804,21 +804,15 @@ $buttonOrange:#ec6a34;
                 }
             }
             .adicionalPrivado {
-                display:none;
+                display:block;
                 transition:all 3s linear;
                 color:#fff;
                 background-color:#e41f25;
                 font-size:0.6em;
                 .telefonoPrivado{display:inline-block;margin-left:2em;}
                 .direccionPrivado{ display:inline-block; float:right; margin-right:2em;}
-            } 
-        }
-        &>ul li:hover {
-            .adicionalPrivado {
-                display:block;
             }
         }
-    
     }
     .emergenciaColgar {
         @include flexChild(1,0 1 auto,stretch,11%,0 auto,0);

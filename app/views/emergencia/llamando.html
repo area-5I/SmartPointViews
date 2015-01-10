@@ -10,31 +10,14 @@
     </a>
     <div class="privadoEmergencia">
         <ul>
-            <li>
+            <li ng-repeat="item in emergencias[tipoEmergencia]">
                 <div class="principalPrivado">
-                    <img src="../images/menu/auricular.svg"/><a class="nombrePrivado">LOS OLIVOS</a><i class=" rightIcon fa fa-caret-down fa-fw"></i>
+                    <img src="../images/menu/auricular.svg"/><a class="nombrePrivado">{{item.nombre}}</a><i class=" rightIcon fa fa-caret-down fa-fw" ng-click="seleccionar($index)" ></i>
+            
                 </div>
-                <span class="adicionalPrivado">
-                    <p class="telefonoPrivado"><i class="fa fa-ambulance fa-fw"></i> 44727272 </p>
-                    <p class="direccionPrivado"><i class="fa fa-home fa-fw"></i> Av costanera</p>
-                </span>
-            </li>
-            <li>
-                <div class="principalPrivado">
-                    <img src="../images/menu/auricular.svg"/><a class="nombrePrivado">UNIVALLE</a>
-                </div>
-                <span class="adicionalPrivado">
-                    <p class="telefonoPrivado">44727272 </p>
-                    <p class="direccionPrivado">Av costanera</p>
-                </span>
-            </li>
-            <li>
-                <div class="principalPrivado">
-                    <img src="../images/menu/auricular.svg"/><a class="nombrePrivado">SAN PEDRO</a>
-                </div>
-                <span class="adicionalPrivado">
-                    <p class="telefonoPrivado">44727272 </p>
-                    <p class="direccionPrivado">Av costanera</p>
+                <span class="adicionalPrivado" ng-show="seleccionado() == $index">
+                    <p class="telefonoPrivado"><i class="fa fa-phone fa-fw"></i> {{item.telefono}}</p>
+                    <p class="direccionPrivado"><i class="fa fa-home fa-fw"></i> {{item.direccion}}</p>
                 </span>
             </li>
         </ul>
