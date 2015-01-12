@@ -8,12 +8,13 @@
  * Controller of the smartPointViewsApp
  */
 angular.module('smartPointViewsApp')
-  .controller('EmergenciaLlamandoCtrl', function ($scope,$stateParams) {
+  .controller('EmergenciaLlamandoCtrl', function ($scope,$stateParams,$location) {
       $scope.seleccionar=function(index){
           $scope.seleccion=index;
       }
-      $scope.seleccionado=function(){
-          return $scope.seleccion; 
+      $scope.seleccionado=function(index){
+          return $scope.seleccion==index;
+
         };
       $scope.tipoEmergencia=$stateParams.tipoEmergencia;
       $scope.emergencias={
@@ -48,7 +49,7 @@ angular.module('smartPointViewsApp')
                 telefono:"4565555",
                 direccion:"Av. Dominical"}]
       }
-      $scope.showDetail=function() {
-        
-      }
+      $scope.llamar=function(index) {
+            $location.path('/llamada/llamando/'+$scope.emergencias[$scope.tipoEmergencia][index].telefono);
+      };
   });

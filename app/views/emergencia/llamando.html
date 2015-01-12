@@ -12,17 +12,17 @@
         <ul>
             <li ng-repeat="item in emergencias[tipoEmergencia]">
                 <div class="principalPrivado">
-                    <img src="../images/menu/auricular.svg"/><a class="nombrePrivado">{{item.nombre}}</a><i class=" rightIcon fa fa-caret-down fa-fw" ng-click="seleccionar($index)" ></i>
+                    <img ng-click="llamar($index)" src="../images/menu/auricular.svg"/><a class="nombrePrivado">{{item.nombre}}</a><i class=" rightIcon fa fa-caret-down fa-fw" ng-click="seleccionar($index)" ></i>
             
                 </div>
-                <span class="adicionalPrivado" ng-show="seleccionado() == $index">
+                <span class="adicionalPrivado" ng-show="seleccionado($index)">
                     <p class="telefonoPrivado"><i class="fa fa-phone fa-fw"></i> {{item.telefono}}</p>
                     <p class="direccionPrivado"><i class="fa fa-home fa-fw"></i> {{item.direccion}}</p>
                 </span>
             </li>
         </ul>
     </div>
-    <button class="emergenciaColgar redPanel">
+    <button ui-sref="emergencia" class="emergenciaColgar redPanel">
         <img src="../images/otros/colgar.svg"/>
     </button>
 </div>
