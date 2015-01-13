@@ -805,13 +805,24 @@ $buttonOrange:#ec6a34;
             }
             .adicionalPrivado {
                 display:block;
-                transition:all 3s linear;
                 color:#fff;
                 background-color:#e41f25;
                 font-size:0.6em;
+                height:1.4em;
+                opacity:1;
                 .telefonoPrivado{display:inline-block;margin-left:2em;}
                 .direccionPrivado{ display:inline-block; float:right; margin-right:2em;}
             }
+             .adicionalPrivado.ng-hide {
+                    opacity: 0;
+                    height: 0em;
+                }
+              .adicionalPrivado.ng-hide-add.ng-hide-add-active,
+               .adicionalPrivado.ng-hide-remove.ng-hide-remove-active {
+                    -webkit-transition: all linear .4s;
+                    transition: all linear .4s;
+                    height:1.4em;
+                }
         }
     }
     .emergenciaColgar {
