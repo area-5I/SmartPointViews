@@ -52,6 +52,11 @@ angular
         templateUrl: 'views/ayuda.html',
         controller: 'AyudaCtrl'
       })
+      .state('ayuda.buscar', {
+          url:'/bucar/:servicio',
+          templateUrl: 'views/ayuda/buscar.html',
+          controller: 'AyudaBuscarCtrl'
+      })
       .state('recarga.recargador', {
         url:'/:empresaId',
         templateUrl: 'views/recarga/recargador.html',
