@@ -1,18 +1,14 @@
 <div class="buscarAyuda">
-    <input type="text" class="entradaBuscar"/>
+    <input ng-model="search.name" type="text" class="entradaBuscar"/>
     <div class="serviciosPanel">
         
-        <div class="pais-box"><div class="pais-flagbox"><span class="pais-flag ad"></span></div><div class="pais-title">Andorra (ad)</div></div>
-        <div class="pais-box"><div class="pais-flagbox"><span class="pais-flag ae"></span></div><div class="pais-title">United Arab Emirates (ae)</div></div>
-        <div class="pais-box"><div class="pais-flagbox"><span class="pais-flag af"></span></div><div class="pais-title">Afghanistan (af)</div></div>
-        <div class="pais-box"><div class="pais-flagbox"><span class="pais-flag ag"></span></div><div class="pais-title">Antigua And Barbuda (ag)</div></div>
-        <div class="pais-box"><div class="pais-flagbox"><span class="pais-flag ai"></span></div><div class="pais-title">Anguilla (ai)</div></div>
-        <div class="pais-box"><div class="pais-flagbox"><span class="pais-flag al"></span></div><div class="pais-title">Albania (al)</div></div>
-        <div class="pais-box"><div class="pais-flagbox"><span class="pais-flag am"></span></div><div class="pais-title">Armenia (am)</div></div>
-        <div class="pais-box"><div class="pais-flagbox"><span class="pais-flag an"></span></div><div class="pais-title">Netherlands Antilles (an)</div></div>
-        <div class="pais-box"><div class="pais-flagbox"><span class="pais-flag ao"></span></div><div class="pais-title">Angola (ao)</div></div>
-        <div class="pais-box"><div class="pais-flagbox"><span class="pais-flag ar"></span></div><div class="pais-title">Argentina (ar)</div></div>
-        <div class="pais-box"><div class="pais-flagbox"><span class="pais-flag as"></span></div><div class="pais-title">American Samoa (as)</div></div>
+        <div class="pais-box" ng-repeat="itemServicio in servicios |filter:search">
+            <div class="pais-flagbox"i ng-if="itemServicio!=null">
+                <span class="pais-flag {{itemServicio.code}}"></span>
+            </div>
+            <div class="pais-title">{{itemServicio.name}}</div>
+            <div class="pais-number">{{itemServicio.number}}</div>
+        </div>
     </div>
         <ul id="keyboard">
             <li ng-click="teclar('`','~')" class="symbol"><span ng-hide="shiftActivado" >`</span><span ng-show="shiftActivado">~</span></li>
