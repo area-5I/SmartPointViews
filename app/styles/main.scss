@@ -900,15 +900,16 @@ $buttonOrange:#ec6a34;
             width:100%;
             height:20%;
             display:block;
-            border-bottom: 0.1em solid #0974ba;
+            border-top: 0.2em solid #0974ba;
+            //border-bottom: 0.2em solid #0974ba;
             .pais-flagbox {
                 width: 20%;
                 height:100%;
                 display:inline-block;
                 vertical-align:middle;
                 .pais-flag {
+                    margin-top:1.2em;
                     display:inline-block;
-                    vertical-align: middle;
                     width: 10em;
                     height: 7em;
                     border-radius:2em;
@@ -925,6 +926,21 @@ $buttonOrange:#ec6a34;
                 font-size: 2.5em;
                 background-color: #0974ba;
                 color: white;
+            }
+            .direccion-servicio {
+                display:block;
+                font-size: 1.6em;
+                background-color: #0974ba;
+                color:white;
+                .direccion-name {
+                    display:inline;
+                    margin-left:1em;
+                }
+                .direccion-number {
+                    display:inline;
+                    float:right;
+                    margin-right: 1em;
+                }
             } 
         }
         .pais-box.ng-leave{

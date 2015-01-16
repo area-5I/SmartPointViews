@@ -3,11 +3,15 @@
     <div class="serviciosPanel">
         
         <div class="pais-box" ng-repeat="itemServicio in servicios |filter:search">
-            <div class="pais-flagbox"i ng-if="itemServicio!=null">
+            <div class="pais-flagbox" ng-if="itemServicio.code!=null">
                 <span class="pais-flag {{itemServicio.code}}"></span>
             </div>
             <div class="pais-title">{{itemServicio.name}}</div>
-            <div class="pais-number">{{itemServicio.number}}</div>
+            <div class="pais-number" ng-if="itemServicio.code!=null">{{itemServicio.number}}</div>
+            <div class="direccion-servicio" ng-if="servicio!='codigos'">
+                <p class="direccion-name"><i class="fa fa-home fa-fw"></i>{{itemServicio.direccion}}</p>
+                <p class="direccion-number"><i class="fa fa-phone fa-fw"></i>{{itemServicio.number}}</p>
+            </div>
         </div>
     </div>
         <ul id="keyboard">

@@ -13,8 +13,8 @@ angular.module('smartPointViewsApp')
     $scope.search={name:""};
     if($scope.servicio=="codigos") {
         $scope.servicios=[
-        {name:"Andorra",code:"ad",number:777},
-        {name:"United Arab Emirates",code:"ae",number:333},
+        {name:"Andorra",code:"ad",number:77},
+        {name:"United Arab Emirates",code:"ae",number:3333},
         {name:"Afghanistan",code:"af",number:333},
         {name:"Antigua And Barbuda",code:"ag",number:777},
         {name:"Anguilla",code:"ai",number:333},
@@ -50,12 +50,46 @@ angular.module('smartPointViewsApp')
         {name:"Colombia",code:"co",number:222}
         ];
     } else if($stateParams.servicio=='restaurantes') {
-        $scope.servicios=[];
+        $scope.servicios=[
+        {name:"Dumbo",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
+        {name:"Globos",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
+        {name:"Elis",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
+        {name:"Doña jacinta",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
+        {name:"Don Pepe",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
+        {name:"Churrasqueria Chaqueno",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
+        {name:"El manantial",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
+        {name:"Aroma",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
+        {name:"El Gordo",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
+        {name:"King Don",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
+        {name:"CasaBlanca",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
+        {name:"Pollos kikiriki",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
+        {name:"Pollos Kokoroko",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
+        {name:"El Rey",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
+        {name:"Wistupiku",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"}
+        ];
     } else if($stateParams.servicio=='mecanicos') {
-        $scope.servicios=[];
+        $scope.servicios=[
+        {name:"Don Luis",number:79732456,direccion:"Av. Circuvalacion #567"},
+        {name:"El Choco",number:79732456,direccion:"Av. Circuvalacion #567"},
+        {name:"Hnos Vargas",number:79732456,direccion:"Av. Circuvalacion #567"},
+        {name:"Don German",number:79732456,direccion:"Av. Circuvalacion #567"},
+        {name:"El Chascas",number:79732456,direccion:"Av. Circuvalacion #567"},
+        {name:"Don Fernando",number:79732456,direccion:"Av. Circuvalacion #567"},
+        {name:"Lupe",number:79732456,direccion:"Av. Circuvalacion #567"},
+        {name:"El Gringo",number:79732456,direccion:"Av. Circuvalacion #567"}
+        ];
     
     } else if($stateParams.servicio=='taxis') {
-        $scope.servicios=[];
+        $scope.servicios=[
+        {name:"Ciudad Jardin",number:4787989,direccion:"Av. Panamericana #122"},
+        {name:"San Pedro",number:4787989,direccion:"Av. Panamericana #122"},
+        {name:"Bolivar",number:4787989,direccion:"Av. Panamericana #122"},
+        {name:"Amancayas",number:4787989,direccion:"Av. Panamericana #122"},
+        {name:"Kantuta",number:4787989,direccion:"Av. Panamericana #122"},
+        {name:"Express",number:4787989,direccion:"Av. Panamericana #122"},
+        {name:"Teleferico",number:4787989,direccion:"Av. Panamericana #122"},
+        {name:"kochalita",number:4787989,direccion:"Av. Panamericana #122"}
+        ];
     }
 
       $scope.uppercase = false;
