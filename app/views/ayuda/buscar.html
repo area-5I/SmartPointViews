@@ -6,8 +6,9 @@
             <div class="pais-flagbox" ng-if="itemServicio.code!=null">
                 <span class="pais-flag {{itemServicio.code}}"></span>
             </div>
-            <div class="pais-title">{{itemServicio.name}}</div>
+            <div class="pais-title"><i ng-if="icon!=null" class="fa fa-{{icon}} fa-lg"></i> {{itemServicio.name}}</div>
             <div class="pais-number" ng-if="itemServicio.code!=null">{{itemServicio.number}}</div>
+            <div class="call-servicio" ng-if="itemServicio.code!=null"></div>
             <div class="direccion-servicio" ng-if="servicio!='codigos'">
                 <p class="direccion-name"><i class="fa fa-home fa-fw"></i>{{itemServicio.direccion}}</p>
                 <p class="direccion-number"><i class="fa fa-phone fa-fw"></i>{{itemServicio.number}}</p>

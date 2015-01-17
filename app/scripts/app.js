@@ -94,22 +94,21 @@ angular
             }
         };
     })
-.directive('myCurrentTime', function($timeout, dateFilter) {
-    return function(scope, element, attrs) {
-      var format, timeoutId;
-        function updateTime() {
+    .directive('myCurrentTime', function($timeout, dateFilter) {
+        return function(scope, element, attrs) {
+            var format, timeoutId;
+            function updateTime() {
                 element.text(dateFilter(new Date(),"HH:mm:ss '|' MM/dd/yy"));
             }
-        function updateLater() {
+            function updateLater() {
                 timeoutId = $timeout(function() {
-                updateTime();
-                updateLater();
-              }, 1000);
-        }
+                    updateTime();
+                    updateLater();
+                }, 1000);
+            }
             element.bind('$destroy', function() {
             $timeout.cancel(timeoutId);
         });
-
         updateLater();
     }
 });

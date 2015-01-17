@@ -50,6 +50,7 @@ angular.module('smartPointViewsApp')
         {name:"Colombia",code:"co",number:222}
         ];
     } else if($stateParams.servicio=='restaurantes') {
+        $scope.icon="cutlery";
         $scope.servicios=[
         {name:"Dumbo",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
         {name:"Globos",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
@@ -68,6 +69,7 @@ angular.module('smartPointViewsApp')
         {name:"Wistupiku",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"}
         ];
     } else if($stateParams.servicio=='mecanicos') {
+        $scope.icon="wrench";
         $scope.servicios=[
         {name:"Don Luis",number:79732456,direccion:"Av. Circuvalacion #567"},
         {name:"El Choco",number:79732456,direccion:"Av. Circuvalacion #567"},
@@ -80,6 +82,7 @@ angular.module('smartPointViewsApp')
         ];
     
     } else if($stateParams.servicio=='taxis') {
+        $scope.icon="taxi";
         $scope.servicios=[
         {name:"Ciudad Jardin",number:4787989,direccion:"Av. Panamericana #122"},
         {name:"San Pedro",number:4787989,direccion:"Av. Panamericana #122"},
