@@ -2,7 +2,11 @@
 // endbower
 
 
-/* Space out content a bit */
+/* Space out content a bit #A0974ba*/
+$colorOrange:#ec6a34;
+$colorGreen:#009d45;
+$colorBlue:#0974ba;
+$colorRed:#e41f25;
 @mixin clearSpace {
     margin:0;
     padding:0;
@@ -85,11 +89,11 @@ button:focus {
 }
 
 .emergenciaHeader {
-    background-color: #e41f25;
+    background-color: $colorRed;
 }
 
 .ayudaHeader {
-    background-color:#0974ba;
+    background-color:$colorBlue;
 }
 
 .llamadasHeader {
@@ -250,15 +254,14 @@ animation:slideOutLeft 0.5s both ease;
 }
 
 .redPanel {
-    @include panel(#e41f25,black);
+    @include panel($colorRed,black);
 }
 
 .bluePanel {
-    @include panel(#0974ba,black); 
+    @include panel($colorBlue,black); 
 }
 
 /* Llamadas views*/
-$buttonGreen:#009d45;
 .teclado {
     width: 85%;
     height: 99%;
@@ -268,13 +271,25 @@ $buttonGreen:#009d45;
 .pantalla {
     width: 90%;
     height: 12%;
-    border: 0.2em $buttonGreen solid;
     border-radius: 5em;
     margin: 5% 0% 5% 8%;
     display:inline-flex;
     justify-content: space-between;
     flex-direction: row;
     align-items: space-between;
+}
+
+.pantallaColorGreen {
+    &>input {
+        color:$colorGreen;
+    }
+    border: 0.2em $colorGreen solid;
+}
+.pantallaColorOrange {
+    &>input {
+        color:$colorOrange;
+    }
+    border: 0.2em $colorOrange solid;
 }
 
 .pantalla>input {
@@ -284,7 +299,6 @@ $buttonGreen:#009d45;
     border: 0 none;
     margin-left:0.2em;
     border-radius:5em;
-    color:$buttonGreen;
     order:1;
 }
 
@@ -312,7 +326,7 @@ $buttonGreen:#009d45;
     order:2;
     flex: 1 0 auto;
     text-align:center;
-    color:$buttonGreen;
+    color:$colorGreen;
 }
 
 .pantalla .contador>p {
@@ -338,7 +352,7 @@ $buttonGreen:#009d45;
 }
 
 .tecla {
-    background-color: $buttonGreen;
+    background-color: $colorGreen;
     color: white;
     width: 22%;
     height: 19%;
@@ -372,7 +386,7 @@ $buttonGreen:#009d45;
     margin-top: 30%;
     width: 80%;
     height: 10%;
-    background-color: $buttonGreen;
+    background-color: $colorGreen;
 }
 
 .opciones .dinero {
@@ -384,7 +398,7 @@ $buttonGreen:#009d45;
     padding: 0.5em .8em;
     color: white;
     display: inline;
-    background-color: $buttonGreen;
+    background-color: $colorGreen;
     border-radius: 3em;
     margin-left:1em;
 }
@@ -392,7 +406,7 @@ $buttonGreen:#009d45;
 .opciones .dinero .letraGreen {
     display: inline;
     font-size: 5em;
-    color: $buttonGreen;
+    color: $colorGreen;
 }
 
 .opciones .atras {
@@ -400,7 +414,7 @@ $buttonGreen:#009d45;
     height: 17%;
     border-radius: 100%;
     text-align: center;
-    background-color: $buttonGreen;
+    background-color: $colorGreen;
     margin-bottom: 30%;
 }
 
@@ -420,7 +434,7 @@ $buttonGreen:#009d45;
     width: 100%;
     height: 100%;
     border-radius: 6em;
-    background-color: $buttonGreen;
+    background-color: $colorGreen;
 }
 
 .llamar>button>img {
@@ -536,7 +550,7 @@ $buttonGreen:#009d45;
     .iconoImprimir {
         height: 95%;
         border-radius: 3em;
-        background-color: $buttonGreen;
+        background-color: $colorGreen;
         color: #fff;
         font-size:2.5em;
         display:inline-block;
@@ -555,7 +569,7 @@ $buttonGreen:#009d45;
         height: 95%;
         width: 49%;
         display:inline-block;
-        background-color: red;
+        background-color: $colorRed;
         border-radius: 3em;
         img {
             float:center;
@@ -593,12 +607,11 @@ $buttonGreen:#009d45;
         width: 4em;
         height: 4em;
         svg {
-            fill:$buttonGreen;
+            fill:$colorGreen;
         }
     }
 }
 //views of recargas
-$buttonOrange:#ec6a34;
 .empresas {
     width:100%;
     height:100%;
@@ -657,7 +670,7 @@ $buttonOrange:#ec6a34;
         float:left;
         width:50%;
         height:100%;
-        background-color:$buttonOrange;
+        background-color:$colorOrange;
         border-radius:5em;
         p {
             font-size:3em;
@@ -677,14 +690,14 @@ $buttonOrange:#ec6a34;
             float:left;
             width: 52%;
             height:100%;
-            background-color:$buttonOrange;
+            background-color:$colorOrange;
             text-align:center;
             border-radius:50%;
             margin-right:0.5em;
         }
         .letraOrange {
             float: left;
-            color: $buttonOrange;
+            color: $colorOrange;
         }
     }
 
@@ -692,7 +705,7 @@ $buttonOrange:#ec6a34;
 .cuerpoRecarga {
     margin-left:10%;
     .tecla {
-        background-color:$buttonOrange;
+        background-color:$colorOrange;
     }
 
     .tecladito {
@@ -710,7 +723,7 @@ $buttonOrange:#ec6a34;
         height:100%;
         width:60%;
         border-radius: 5em;
-        background-color:$buttonOrange;
+        background-color:$colorOrange;
         img {
             width:$sizeLetter;
             height:$sizeLetter;
@@ -721,7 +734,7 @@ $buttonOrange:#ec6a34;
         border-radius:50%;
         width: 25%;
         height: 100%;
-        background-color:$buttonOrange;
+        background-color:$colorOrange;
         &>img {
             width:$sizeLetter;
             height:$sizeLetter;
@@ -761,7 +774,7 @@ $buttonOrange:#ec6a34;
 //emergencias llamandoEmergencia
 @keyframes cambioColor {
     0%,100% {
-        background-color:#e41f25;
+        background-color:$colorRed;
     }
     50% {
         background-color:#009d45;
@@ -769,7 +782,7 @@ $buttonOrange:#ec6a34;
 }
 @-webkit-keyframes cambioColor {
     0%,25%,75%,100% {
-        background-color:#e41f25;
+        background-color:$colorRed;
     }
     50% {
         background-color:#009d45;
@@ -796,7 +809,7 @@ $buttonOrange:#ec6a34;
         &>ul li {
             position:relative;
             list-style:none;
-            border-bottom:0.05em red solid;
+            border-bottom:0.05em $colorRed solid;
             padding-top: 0.5em;
             .principalPrivado {
                 .nombrePrivado {margin-left:0.2em;display:inline-block;transform: translateY(-22%);}
@@ -805,7 +818,7 @@ $buttonOrange:#ec6a34;
                     margin-top:0.2em;
                     width:1em;
                     height:1em;
-                    background-color:#e41f25;
+                    background-color:$colorRed;
                     padding: 0.2em;
                     border-radius:0.2em;
                     animation:4s cambioColor infinite;
@@ -813,13 +826,13 @@ $buttonOrange:#ec6a34;
                 .rightIcon {
                     float:right;
                     margin-top: 0.5em;
-                    color:#e41f25;
+                    color:$colorRed;
                 }
             }
             .adicionalPrivado {
                 display:block;
                 color:#fff;
-                background-color:#e41f25;
+                background-color:$colorRed;
                 font-size:0.6em;
                 height:1.4em;
                 opacity:1;
@@ -897,7 +910,7 @@ $buttonOrange:#ec6a34;
         @include flexChild(1,0 1 auto,stretch,12%,0% 0% 0% 4%,0);
         width:90%;
         border-radius:4em;
-        border: 0.1em #0974ba solid;
+        border: 0.1em $colorBlue solid;
         font-size: 5em;
         text-align:center;
         &:focus {
@@ -913,8 +926,8 @@ $buttonOrange:#ec6a34;
             width:100%;
             height:20%;
             display:block;
-            border-top: 0.2em solid #0974ba;
-            //border-bottom: 0.2em solid #0974ba;
+            border-top: 0.2em solid $colorBlue;
+            //border-bottom: 0.2em solid $colorBlue;
             .pais-flagbox {
                 width: 20%;
                 height:100%;
@@ -937,13 +950,13 @@ $buttonOrange:#ec6a34;
                 float: right;
                 padding: 0.5em;
                 font-size: 2.5em;
-                background-color: #0974ba;
+                background-color: $colorBlue;
                 color: white;
             }
             .direccion-servicio {
                 display:block;
                 font-size: 1.6em;
-                background-color: #0974ba;
+                background-color: $colorBlue;
                 color:white;
                 .direccion-name {
                     display:inline;
@@ -1036,10 +1049,10 @@ $buttonOrange:#ec6a34;
     }
 }
     .recargaExitosaModal {
-        background-color:$buttonOrange;
+        background-color:$colorOrange;
     }
     .imprimiendoModal {
-        background-color:$buttonGreen;
+        background-color:$colorGreen;
     }
 .ng-modal-dialog-content {
     padding:10px;
