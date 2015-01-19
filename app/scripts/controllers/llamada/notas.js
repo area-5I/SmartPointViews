@@ -9,7 +9,10 @@
  */
 angular.module('smartPointViewsApp')
   .controller('LlamadaNotasCtrl', function ($scope) {
-
+      $scope.modalShown=false;
+      $scope.imprimirTexto=function() {
+          $scope.modalShown=!$scope.modalShown;
+      };
       $scope.miTexto = "";
       $scope.uppercase = false;
       $scope.shiftActivado = false;

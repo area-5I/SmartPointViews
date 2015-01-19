@@ -1,9 +1,14 @@
 <div class="initLlamando">
     <textarea ng-model="miTexto" id="write" rows="6" cols="60"></textarea>
-    <button class="iconoImprimir">
-        <img src="images/menu/carrito.svg">
-        <p>Imprimir</p></button>
-    </button>
+    <div class="buttonNotas">
+        <button class="iconoImprimir" ng-click="imprimirTexto()">
+            <img src="images/otros/imprimir.svg"/>
+            <p>IMPRIMIR</p>
+        </button>
+        <button class="iconoColgar" ng-click="colgar()">
+            <img src="images/otros/colgar.svg"/>
+        </button>
+    </div>
         <ul id="keyboard">
             <li ng-click="teclar('`','~')" class="symbol"><span ng-hide="shiftActivado" >`</span><span ng-show="shiftActivado">~</span></li>
             <li ng-click="teclar(1,'!')" class="symbol"><span ng-hide="shiftActivado">1</span><span ng-show="shiftActivado">!</span></li>
@@ -62,3 +67,7 @@
             <li ng-click="teclar(' ')" class="space lastitem">&nbsp;</li>
         </ul>
 </div>
+<modal-dialog show='modalShown' width='70%' height='45%'>
+    <img class="imprimirModal" src="images/otros/imprimir.svg"/>
+    <h1 class="textoImprimirModal">IMPRIMIENDO</h1>
+</modal-dialog>
