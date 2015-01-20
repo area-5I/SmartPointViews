@@ -312,6 +312,10 @@ animation:slideOutLeft 0.5s both ease;
     order:2;
     flex: 1 0 auto;
     margin-right: 1em;
+    &:active img {
+        width: 7em;
+        height: 7em;
+    }
 }
 
 .pantalla>button>img {
@@ -399,7 +403,7 @@ animation:slideOutLeft 0.5s both ease;
         margin-left: 5%;
         transition: all 500ms linear;
     }
-    .ingresoMoneda:active {
+    .ingresoMoneda.active {
         margin-left:50%; 
     }
     .flecha {

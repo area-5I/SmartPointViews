@@ -8,9 +8,10 @@
  * Controller of the smartPointViewsApp
  */
 angular.module('smartPointViewsApp')
-  .controller('LlamadasCtrl', function ($scope, $location,changeColorHeader) {
+  .controller('LlamadasCtrl', function ($scope, $location,changeColorHeader,$timeout) {
       changeColorHeader.setColor('llamadasHeader');
       $scope.numero="";
+      $scope.moneda=0;
       $scope.marcar=function(teclaPulsada) {
         $scope.numero=$scope.numero.concat(teclaPulsada);
       }
@@ -20,4 +21,18 @@ angular.module('smartPointViewsApp')
       $scope.llamarNumero=function() {
         $location.path('/llamada/llamando/'+$scope.numero);
       }
+      $scope.ingresoMoneda = function ingresoMoneda(cantidad) {
+          $scope.moneda += cantidad;
+          $scope.ingresandomoneda="active";
+          $timeout(function(){
+            $scope.ingresandomoneda="";
+          },500);
+      }
+      //Testing functionality
+      $timeout(function(){
+          $scope.ingresoMoneda(1);
+      },4000);
+      $timeout(function(){
+          $scope.ingresoMoneda(2);
+      },8000);
   });
