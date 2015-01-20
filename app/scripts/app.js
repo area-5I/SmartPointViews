@@ -76,6 +76,11 @@ angular
         url:'/juegos',
         templateUrl: 'views/llamada/juegos.html'
       })
+      .state('llamando.ubicacion', {
+        url:'/ubicacion',
+        templateUrl: 'views/llamada/ubicacion.html',
+        controller: 'LlamadaUbicacionCtrl'
+      })
       .state('llamando.hextris', {
         url:'/hextris',
         templateUrl: 'views/llamada/hextris.html'
