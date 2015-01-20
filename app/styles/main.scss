@@ -362,16 +362,34 @@ animation:slideOutLeft 0.5s both ease;
     height: 19%;
     border-radius:10em;
     display: inline-flex;
-    font-size: 5em;
+    font-size: 6em;
     margin-left: 10%;
     order: 0;
     flex: 0 1 auto;
     align-self: auto;
+    position:relative;
+    &>p {
+        margin:auto;
+    }
 }
 
-.tecla>p {
-    text-align: center;
-    margin: auto;
+.teclaConLetra {
+    &>p {
+        position:absolute;
+        text-align: center;
+        display:block;
+        width:100%;
+        height:50%;
+    }
+    &>span {
+        position:absolute;
+        font-size: 0.45em;
+        display:block;
+        text-align: center;
+        width:100%;
+        margin-top:50%;
+        height:50%;
+    }
 }
 
 .opciones {
