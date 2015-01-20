@@ -8,10 +8,9 @@
  * Controller of the smartPointViewsApp
  */
 angular.module('smartPointViewsApp')
-  .controller('LlamadaUbicacionCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('LlamadaUbicacionCtrl', function ($scope,$timeout) {
+      $scope.animacion="animate";
+      $timeout(function() {
+          $scope.animacion="";
+      },3000);
   });
