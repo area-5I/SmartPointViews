@@ -384,9 +384,35 @@ animation:slideOutLeft 0.5s both ease;
 
 .opciones .entrada {
     margin-top: 30%;
-    width: 80%;
-    height: 10%;
+    width: 70%;
+    height: 7%;
     background-color: $colorGreen;
+    position:relative;
+    border-radius: 3em;
+    .ingresoMoneda {
+        position:absolute;
+        padding:2em;
+        background-color: #000;
+        border-radius: 2em;
+        opacity: 0.5;
+        margin-top:0.5em;
+        margin-left: 5%;
+        transition: all 500ms linear;
+    }
+    .ingresoMoneda:active {
+        margin-left:50%; 
+    }
+    .flecha {
+        width: 0;
+        height: 0;
+        border-top: 2em solid transparent;
+        border-bottom: 2em solid transparent;
+        border-left:2em solid #000;
+        float:right;
+        opacity:0.5;
+        margin-top:0.5em;
+        margin-right: 1em;
+    }
 }
 
 .opciones .dinero {
