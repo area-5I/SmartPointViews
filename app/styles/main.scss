@@ -282,6 +282,7 @@ animation:slideOutLeft 0.5s both ease;
     justify-content: space-between;
     flex-direction: row;
     align-items: space-between;
+    background-color: white;
 }
 
 .pantallaColorGreen {
@@ -446,10 +447,12 @@ animation:slideOutLeft 0.5s both ease;
 
 .opciones .dinero {
     text-align: center;
+    margin-top: 4em;
 }
 
 .opciones .dinero .moneda {
-    font-size: 5em;
+    font-size: 6em;
+    font-weight: bold;
     padding: 0.5em .8em;
     color: white;
     display: inline;
@@ -465,12 +468,12 @@ animation:slideOutLeft 0.5s both ease;
 }
 
 .opciones .atras {
-    width: 80%;
-    height: 17%;
+    width: 81%;
+    height: 18%;
     border-radius: 100%;
     text-align: center;
     background-color: $colorGreen;
-    margin-bottom: 30%;
+    margin-bottom: 16%;
 }
 
 .opciones .atras>img {
@@ -480,7 +483,7 @@ animation:slideOutLeft 0.5s both ease;
 }
 
 .llamar {
-    width: 70%;
+    width: 67%;
     height: 12%;
     margin-left: 10%;
 }
