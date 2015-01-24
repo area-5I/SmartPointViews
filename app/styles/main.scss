@@ -539,10 +539,8 @@ animation:slideOutLeft 0.5s both ease;
 
 
 #write {
-    margin: 0 0 5px;
-    padding: 5px;
     width: 100%;
-    height: 50%;
+    height: 80%;
     font-size: 4em;
     background: #fff;
     border: 0.1em solid #f9f9f9;
@@ -605,15 +603,16 @@ animation:slideOutLeft 0.5s both ease;
     cursor: pointer;
 }
 .buttonNotas {
-    height:6.5%;
+    height:6.6%;
     .iconoImprimir {
         height: 95%;
         border-radius: 3em;
         background-color: $colorGreen;
         color: #fff;
-        font-size:2.5em;
+        font-size:2.54em;
         display:inline-block;
-        width: 45%;
+        width: 40%;
+        margin-right: 5%;
         img {
             float:left;
             width:1.3em;
@@ -625,13 +624,13 @@ animation:slideOutLeft 0.5s both ease;
         }
     }
     .iconoColgar {
-        height: 95%;
-        width: 45%;
+        height: 90%;
+        width: 40%;
         display:inline-block;
         background-color: $colorRed;
         border-radius: 3em;
+        margin-right: 5%;
         img {
-            float:center;
             width:4em;
             height:4em;
         } 
@@ -643,9 +642,8 @@ animation:slideOutLeft 0.5s both ease;
         background-color: $colorGreen;
         border-radius: 3em;
         img {
-            float:center;
             width:3em;
-            height:4em;
+            height:3em;
         } 
     }
 }
@@ -1161,7 +1159,7 @@ animation:slideOutLeft 0.5s both ease;
     }
     
     .serviciosPanel {
-        @include flexChild(1,0 1 auto,stretch,55%,0% 0% 0% 10%,0);
+        @include flexChild(1,0 1 auto,stretch,70%,0% 0% 0% 10%,0);
         width:80%;
         overflow: hidden;
         background-color: white;
@@ -1171,7 +1169,7 @@ animation:slideOutLeft 0.5s both ease;
         .pais-box {
             opacity: 1;
             width:100%;
-            height:20%;
+            height:12%;
             display:block;
             border-top: 0.2em solid $colorBlue;
             //border-bottom: 0.2em solid $colorBlue;
