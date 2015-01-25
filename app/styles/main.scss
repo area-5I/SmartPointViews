@@ -1050,8 +1050,8 @@ animation:slideOutLeft 0.5s both ease;
     }
     .privadoEmergencia {
         @include flexChild(1,0 1 auto,stretch,40%,0% 0% 0% 4%,0);
-        background-color: white;
-        opacity: .7;
+        background-color: black;
+        opacity: .6;
         padding: 0em .5em;
         border-radius: .5em;
         &>ul li {
@@ -1061,7 +1061,12 @@ animation:slideOutLeft 0.5s both ease;
             padding-top: 0.5em;
             opacity: 1;
             .principalPrivado {
-                .nombrePrivado {margin-left:0.2em;display:inline-block;transform: translateY(-22%);}
+                .nombrePrivado {
+                    margin-left:0.2em;
+                    display:inline-block;
+                    transform: translateY(-22%);
+                    color:white;
+                }
                 img {
                     position:relative;
                     margin-top:0.2em;
@@ -1162,7 +1167,9 @@ animation:slideOutLeft 0.5s both ease;
         border: 0.1em $colorBlue solid;
         font-size: 5em;
         text-align:center;
-        opacity:.8;
+        opacity:.5;
+        background-color: black;
+        color: $colorBlue;
         &:focus {
             outline: 0px solid transparent;
         }
@@ -1172,8 +1179,8 @@ animation:slideOutLeft 0.5s both ease;
         @include flexChild(1,0 1 auto,stretch,70%,0% 0% 0% 10%,0);
         width:80%;
         overflow: hidden;
-        background-color: white;
-        opacity: .7;
+        background-color: black;
+        opacity: .5;
         padding: .5em 1em;
         border-radius: .5em;
         .pais-box {
@@ -1182,7 +1189,6 @@ animation:slideOutLeft 0.5s both ease;
             height:12%;
             display:block;
             border-top: 0.2em solid $colorBlue;
-            //border-bottom: 0.2em solid $colorBlue;
             .pais-flagbox {
                 width: 20%;
                 height:100%;
@@ -1200,6 +1206,7 @@ animation:slideOutLeft 0.5s both ease;
                 font-size: 3.2em;
                 display: inline-block;
                 vertical-align:middle;
+                color: white;
             }
             .pais-number {
                 float: right;

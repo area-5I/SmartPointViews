@@ -133,10 +133,15 @@ angular
                     scope.dialogStyle.width = attrs.width;    
                 if (attrs.height)
                     scope.dialogStyle.height = attrs.height;
-                    scope.hideModal = function() {
+                scope.hideModal = function() {
                         scope.show = false;
                     };
                 },
-            template: "<div class='ng-modal' ng-show='show'><div class='ng-modal-overlay' ng-click='hideModal()'></div><div class='ng-modal-dialog {{tipemodal}}' ng-style='dialogStyle'><div class='ng-modal-close' ng-click='hideModal()'>X</div><div class='ng-modal-dialog-content' ng-transclude></div></div></div>"
+            template: "<div class='ng-modal' ng-show='show'><div class='ng-modal-overlay' ng-click='hideModal()'></div><div class='ng-modal-dialog {{tipemodal}}' ng-style='dialogStyle'><div class='ng-modal-dialog-content' ng-transclude></div></div></div>"
             };
+    })
+    .directive('keyboard', function() {
+        return {
+            templateUrl: 'views/templates/keyboard.html'
+        };
     });
