@@ -567,7 +567,7 @@ animation:slideOutLeft 0.5s both ease;
     left:3%;
 }
 
-#keyboard {
+.keyboard {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -643,7 +643,7 @@ animation:slideOutLeft 0.5s both ease;
     text-transform: uppercase;
 }
 
-#keyboardNumeral {
+.keyboardNumeral {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -699,8 +699,32 @@ animation:slideOutLeft 0.5s both ease;
     .numeralkey {
         width: 2.5em;
     }
+    .specialkey {
+        background-color: #353535;
+    }
 }
 
+.animatekey.ng-hide-add.ng-hide-add-active,
+.animatekey.ng-hide-remove.ng-hide-remove-active {
+      -webkit-transition: all linear 0.2s;
+        transition: all linear 0.2s;
+    }
+
+    .animatekey.ng-hide {
+            margin-top: 100%;
+
+          }
+
+.keyboardNumeral.ng-hide-add.ng-hide-add-active,
+.keyboardNumeral.ng-hide-remove.ng-hide-remove-active {
+      -webkit-transition: all linear 0.2s;
+        transition: all linear 0.2s;
+    }
+
+    .keyboardNumeral.ng-hide {
+            margin-top: 100%;
+
+          }
 .buttonNotas {
     height:6.6%;
     .iconoImprimir {
@@ -1339,11 +1363,6 @@ animation:slideOutLeft 0.5s both ease;
             opacity: 0;
             right: -10em;
         }
-    }
-
-    #keyboard {
-        @include flexChild(1,0 1 auto,stretch,25.5%,0% 0% 0% 6%,0);
-        width:94%;
     }
 }
 

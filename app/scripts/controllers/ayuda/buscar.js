@@ -93,44 +93,5 @@ angular.module('smartPointViewsApp')
         {name:"Teleferico",number:4787989,direccion:"Av. Panamericana #122"},
         {name:"kochalita",number:4787989,direccion:"Av. Panamericana #122"}
         ];
-    }
-
-      $scope.uppercase = false;
-      $scope.shiftActivado = false;
-
-      $scope.teclar = function(t1, t2) {
-        if($scope.shiftActivado) {
-            if(typeof t2 !== "undefined") {
-                $scope.search.name += t2;
-            } else {
-                $scope.search.name += t1.toUpperCase();
-            }
-            $scope.shift();
-        } else {
-            $scope.search.name=$scope.search.name+t1;
-        }
-      };
-
-      $scope.shift = function() {
-        $scope.shiftActivado = !$scope.shiftActivado;
-        if($scope.shiftActivado && $scope.uppercase){
-            $scope.casse = "";
-        } else if($scope.shiftActivado && !$scope.uppercase) {
-            $scope.casse = "uppercase";
-        }
-        else if(!$scope.shiftActivado && $scope.uppercase){
-            $scope.casse = "uppercase";
-        } else {
-            $scope.casse = "";
-        }
-      };
-
-      $scope.capslock = function() {
-        $scope.uppercase = !$scope.uppercase;
-        $scope.casse = $scope.uppercase ? "uppercase" : "";
-      };
-
-      $scope.borrar = function(){
-        $scope.search.name=$scope.search.name.substr(0, $scope.search.name.length - 1) 
-      };
+    };
   });

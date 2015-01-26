@@ -1,5 +1,5 @@
 <div class="keyboardDirective">
-    <!--<ul id="keyboard">
+    <ul class="keyboard animatekey" ng-show="showkeyboard">
         <li ng-click="teclar('q')" ng-class="casse" class="frontline">q</li>
         <li ng-click="teclar('w')" ng-class="casse" class="frontline">w</li>
         <li ng-click="teclar('e')" ng-class="casse" class="frontline">e</li>
@@ -29,12 +29,12 @@
         <li ng-click="teclar('n')" ng-class="casse" class="frontline">n</li>
         <li ng-click="teclar('m')" ng-class="casse" class="frontline">m</li>
         <li ng-click="borrar()" class="delete specialkey lastitem"><img src="images/otros/borrarWhite.svg"></li>
-        <li class=" numeralkey specialkey">123</li>
+        <li ng-click="changeKeyboard()" class=" numeralkey specialkey">123</li>
         <li ng-click="capslock()" class="capslock specialkey">Bloq</li>
         <li ng-click="teclar(' ')" class="space lastitem">&nbsp;</li>
         <li class=" executeKey specialkey lastitem">Intro</li>
-    </ul>-->
-    <ul id="keyboardNumeral">
+    </ul>
+    <ul class="keyboardNumeral animatekey" ng-hide="showkeyboard">
         <li ng-click="teclar('1')" class="frontline firstkey">1</li>
         <li ng-click="teclar('2')" class="frontline">2</li>
         <li ng-click="teclar('3')" class="frontline lastkey">3</li>
@@ -45,7 +45,7 @@
         <li ng-click="teclar('8')" class="frontline">8</li>
         <li ng-click="teclar('9')" class="frontline">9</li>
         <li ng-click="borrar()" class="delete specialkey lastitem"><img src="images/otros/borrarWhite.svg"></li>
-        <li class=" numeralkey specialkey">ABC</li>
+        <li ng-click="changeKeyboard()" class=" numeralkey specialkey">ABC</li>
         <li ng-click="teclar('0')" class="frontline">0</li>
         <li ng-click="teclar(' ')" class="space lastitem">&nbsp;</li>
         <li class=" executeKey specialkey lastitem">Intro</li>

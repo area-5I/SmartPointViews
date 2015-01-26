@@ -142,6 +142,50 @@ angular
     })
     .directive('keyboard', function() {
         return {
+            restrict: 'E',
+            scope: {
+                inputText: '=inputText'
+            },
+            link: function(scope, element, attrs) {
+                scope.showkeyboard = true;
+                scope.changeKeyboard = function() {
+                    scope.showkeyboard = !scope.showkeyboard;
+                }; 
+                scope.uppercase = false;
+                scope.shiftActivado = false;
+
+                scope.teclar = function(t1) {
+                if(scope.shiftActivado) {
+                    scope.inputText += t1.toUpperCase();
+                    scope.shift();
+                } else {
+                    scope.inputText=scope.inputText+t1;
+                }
+                };
+
+                scope.shift = function() {
+                    scope.shiftActivado = !scope.shiftActivado;
+                    if(scope.shiftActivado && $scope.uppercase){
+                        scope.casse = "";
+                    } else if(scope.shiftActivado && !scope.uppercase) {
+                        scope.casse = "uppercase";
+                    }
+                    else if(!scope.shiftActivado && scope.uppercase){
+                        scope.casse = "uppercase";
+                    } else {
+                        scope.casse = "";
+                    }
+                };
+
+                scope.capslock = function() {
+                    scope.uppercase = !scope.uppercase;
+                    scope.casse = scope.uppercase ? "uppercase" : "";
+                };
+
+                scope.borrar = function(){
+                    scope.inputText = scope.inputText.substr(0, scope.inputText.length - 1) 
+                };
+            },
             templateUrl: 'views/templates/keyboard.html'
         };
     });
