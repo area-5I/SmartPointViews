@@ -565,10 +565,6 @@ animation:slideOutLeft 0.5s both ease;
     z-index: 100;
     top: 70%;
     left:3%;
-    background-color: #1A1A1A;
-    opacity: .9;
-    padding: 1em;
-    border-radius: .5em .5em 3em 3em;
 }
 
 #keyboard {
@@ -577,6 +573,10 @@ animation:slideOutLeft 0.5s both ease;
     list-style: none;
     height: 100%;
     width: 100%;
+    background-color: #1A1A1A;
+    opacity: .9;
+    padding: 1em;
+    border-radius: .5em .5em 3em 3em;
     
     li {
         display:inline-block;
@@ -587,7 +587,7 @@ animation:slideOutLeft 0.5s both ease;
         background: #000;
         color:#fff;
         font-size:3.2em;
-        border: 1px solid #f9f9f9;
+        border: 0.055em solid #f9f9f9;
         border-radius: 1em;
         line-height: 2em;
         margin-right: .3em;
@@ -603,7 +603,7 @@ animation:slideOutLeft 0.5s both ease;
         margin-left: .9em;
     }
     .frontline {
-        margin-right: .5em;
+        margin-right: .42em;
     }
     .executeKey {
         width: 4em;
@@ -631,7 +631,7 @@ animation:slideOutLeft 0.5s both ease;
         width: 3em;
     }
     .space {
-        width: 57%;
+        width: 56%;
     }
     .shift {
         width: 2.2em;
@@ -641,6 +641,64 @@ animation:slideOutLeft 0.5s both ease;
 
 .uppercase {
     text-transform: uppercase;
+}
+
+#keyboardNumeral {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 100%;
+    width: 52%;
+    background-color: #1A1A1A;
+    opacity: .9;
+    padding: 1em;
+    border-radius: .5em .5em 3em 3em;
+    margin:auto;
+    li {
+        display:inline-block;
+        margin: 0 5px 5px 0;
+        width: 2em;
+        height: 2em;
+        text-align: center;
+        background: #000;
+        color:#fff;
+        font-size:3.2em;
+        border: 0.055em solid #f9f9f9;
+        border-radius: 1em;
+        line-height: 2em;
+        margin-right: .3em;
+        margin-bottom: .5em;
+        &:active {
+            position: relative;
+            top: 0.1em;
+            left: 0.1em;
+            border-color: #e5e5e5;
+        }
+    }
+    .delete {
+        margin-right:0;
+        width: 2.3em;
+        img {
+            margin-top: .3em;
+            width: 60%;
+        }
+    }
+    .frontline {
+        margin-right: .42em;
+    }
+    .firstkey {
+        margin-left: 3em;
+    }
+    .space {
+        width: 35%;
+    }
+    .executeKey {
+        width: 2.5em;
+        margin-right: 0;
+    }
+    .numeralkey {
+        width: 2.5em;
+    }
 }
 
 .buttonNotas {
