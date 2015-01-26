@@ -1,6 +1,6 @@
 <div class="buscarAyuda">
-    <input ng-model="search.name" type="text" class="entradaBuscar"/>
-    <div class="serviciosPanel">
+    <input ng-model="search.name" type="text" class="entradaBuscar" ng-click="togglekeyboard()"/>
+    <div class="serviciosPanel" ng-click="hideKeyboard()">
         
         <div class="pais-box" ng-repeat="itemServicio in servicios |filter:search">
             <div class="pais-flagbox" ng-if="itemServicio.code!=null">
@@ -16,4 +16,4 @@
         </div>
     </div>
 </div>
-<keyboard input-text="search.name"></keyboard>
+<keyboard input-text="search.name" show-keyboard-panel="showKeyboardpanel" type-execute="find"></keyboard>

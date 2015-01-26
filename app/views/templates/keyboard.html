@@ -1,4 +1,4 @@
-<div class="keyboardDirective">
+<div class="keyboardDirective" ng-show="showkeyboardPanel">
     <ul class="keyboard animatekey" ng-show="showkeyboard">
         <li ng-click="teclar('q')" ng-class="casse" class="frontline">q</li>
         <li ng-click="teclar('w')" ng-class="casse" class="frontline">w</li>
@@ -32,7 +32,7 @@
         <li ng-click="changeKeyboard()" class=" numeralkey specialkey">123</li>
         <li ng-click="capslock()" class="capslock specialkey">Bloq</li>
         <li ng-click="teclar(' ')" class="space lastitem">&nbsp;</li>
-        <li class=" executeKey specialkey lastitem">Intro</li>
+        <li ng-click="executeExec()" class=" executeKey specialkey lastitem">{{execute.name}}</li>
     </ul>
     <ul class="keyboardNumeral animatekey" ng-hide="showkeyboard">
         <li ng-click="teclar('1')" class="frontline firstkey">1</li>
@@ -48,6 +48,6 @@
         <li ng-click="changeKeyboard()" class=" numeralkey specialkey">ABC</li>
         <li ng-click="teclar('0')" class="frontline">0</li>
         <li ng-click="teclar(' ')" class="space lastitem">&nbsp;</li>
-        <li class=" executeKey specialkey lastitem">Intro</li>
+        <li ng-click="executeExec()" class=" executeKey specialkey lastitem">{{execute.name}}</li>
     </ul>
 </div>

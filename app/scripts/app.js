@@ -144,7 +144,8 @@ angular
         return {
             restrict: 'E',
             scope: {
-                inputText: '=inputText'
+                inputText: '=inputText',
+                showkeyboardPanel : '=showKeyboardPanel'
             },
             link: function(scope, element, attrs) {
                 scope.showkeyboard = true;
@@ -153,14 +154,13 @@ angular
                 }; 
                 scope.uppercase = false;
                 scope.shiftActivado = false;
-
                 scope.teclar = function(t1) {
-                if(scope.shiftActivado) {
-                    scope.inputText += t1.toUpperCase();
-                    scope.shift();
-                } else {
-                    scope.inputText=scope.inputText+t1;
-                }
+                    if(scope.shiftActivado) {
+                        scope.inputText += t1.toUpperCase();
+                        scope.shift();
+                    } else {
+                        scope.inputText=scope.inputText+t1;
+                    }
                 };
 
                 scope.shift = function() {
@@ -185,6 +185,24 @@ angular
                 scope.borrar = function(){
                     scope.inputText = scope.inputText.substr(0, scope.inputText.length - 1) 
                 };
+                scope.executeExec=function() {
+                    scope.execute.exec();
+                }
+                if(attrs.typeExecute == "find") {
+                    scope.execute={
+                        name:"buscar",
+                        exec:function() {
+                            scope.showkeyboardPanel = false;
+                        }
+                    }
+                } else {
+                    scope.execute={
+                        name:"Intro",
+                        exec:function(){
+                            scope.teclar('\n');
+                        }
+                    }
+                }
             },
             templateUrl: 'views/templates/keyboard.html'
         };

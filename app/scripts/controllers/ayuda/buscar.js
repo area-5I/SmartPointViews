@@ -94,4 +94,11 @@ angular.module('smartPointViewsApp')
         {name:"kochalita",number:4787989,direccion:"Av. Panamericana #122"}
         ];
     };
+    $scope.showKeyboardpanel=false;
+    $scope.hideKeyboard=function() {
+        $scope.showKeyboardpanel=false;
+    };
+    $scope.togglekeyboard=function() {
+        $scope.showKeyboardpanel=!$scope.showKeyboardpanel;
+    };
   });

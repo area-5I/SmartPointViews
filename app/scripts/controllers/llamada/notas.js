@@ -14,4 +14,8 @@ angular.module('smartPointViewsApp')
           $scope.modalShown=!$scope.modalShown;
       };
       $scope.miTexto = "";
+      $scope.showkeyboardPanel=true;
+      $scope.hideKeyboard=function() {
+          $scope.showkeyboardPanel = !$scope.showkeyboardPanel;
+      };
 });

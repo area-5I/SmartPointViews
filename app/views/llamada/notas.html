@@ -1,5 +1,5 @@
 <div class="initLlamando">
-    <textarea ng-model="miTexto" id="write" rows="6" cols="60"></textarea>
+    <textarea ng-click="hideKeyboard()" ng-model="miTexto" id="write" rows="6" cols="60"></textarea>
     <div class="buttonNotas">
         <button class="iconoImprimir" ng-click="imprimirTexto()">
             <img src="images/otros/imprimir.svg"/>
@@ -17,4 +17,4 @@
     <img class="imprimirModalImg" src="images/otros/imprimir.svg"/>
     <h1 class="textoImprimirModal">IMPRIMIENDO</h1>
 </modal-dialog>
-<keyboard input-text="miTexto"></keyboard>
+<keyboard input-text="miTexto" show-keyboard-panel="showkeyboardPanel"></keyboard>
