@@ -538,7 +538,6 @@ animation:slideOutLeft 0.5s both ease;
 
 //Notas views
 
-
 #write {
     width: 90%;
     height: 80%;
@@ -559,58 +558,91 @@ animation:slideOutLeft 0.5s both ease;
                                                 
 }
 
+.keyboardDirective {
+    height: 28%;
+    width: 92%;
+    position: fixed;
+    z-index: 100;
+    top: 70%;
+    left:3%;
+    background-color: #1A1A1A;
+    opacity: .9;
+    padding: 1em;
+    border-radius: .5em .5em 3em 3em;
+}
+
 #keyboard {
     margin: 0;
     padding: 0;
     list-style: none;
+    height: 100%;
+    width: 100%;
+    
+    li {
+        display:inline-block;
+        margin: 0 5px 5px 0;
+        width: 2em;
+        height: 2em;
+        text-align: center;
+        background: #000;
+        color:#fff;
+        font-size:3.2em;
+        border: 1px solid #f9f9f9;
+        border-radius: 1em;
+        line-height: 2em;
+        margin-right: .3em;
+        margin-bottom: .5em;
+        &:active {
+            position: relative;
+            top: 0.1em;
+            left: 0.1em;
+            border-color: #e5e5e5;
+        }
+    }
+    .akey {
+        margin-left: .9em;
+    }
+    .frontline {
+        margin-right: .5em;
+    }
+    .executeKey {
+        width: 4em;
+        margin-left: .3em;
+    }
+    .numeralkey {
+        width: 2.6em;
+    }
+    .specialkey {
+        background-color: #353535;
+    }
+    .lastitem {
+        margin-right: 0em;
+    }
+    .delete {
+        margin-right:0;
+        margin-left: 2em;
+        width: 2.2em;
+        img {
+            margin-top: .3em;
+            width: 60%;
+        }
+    }
+    .capslock {
+        width: 3em;
+    }
+    .space {
+        width: 57%;
+    }
+    .shift {
+        width: 2.2em;
+        margin-right: .8em;
+    }
 }
 
-#keyboard li {
-    display:inline-block;
-    margin: 0 5px 5px 0;
-    width: 1.9em;
-    height: 50px;
-    line-height: 40px;
-    text-align: center;
-    background: #000;
-    color:#fff;
-    font-size:2em;
-    border: 1px solid #f9f9f9;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-}
-
-#keyboard .tab, #keyboard .delete {
-    width: 3.08em;
-}
-
-#keyboard .capslock {
-    width: 4em;
-}
-#keyboard .return {
-    width:3.31em;
-}
-#keyboard .left-shift {
-    width: 3em;
-}
-#keyboard .right-shift {
-    width: 4.31em;
-}
 .uppercase {
     text-transform: uppercase;
 }
 
-#keyboard .space {
-    width: 100%;
-}
-
-#keyboard li:active {
-    position: relative;
-    top: 0.1em;
-    left: 0.1em;
-    border-color: #e5e5e5;
-    cursor: pointer;
-}
 .buttonNotas {
     height:6.6%;
     .iconoImprimir {
