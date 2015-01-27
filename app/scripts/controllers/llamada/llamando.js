@@ -8,8 +8,8 @@
  * Controller of the smartPointViewsApp
  */
 angular.module('smartPointViewsApp')
-  .controller('LlamadaLlamandoCtrl', function ($scope,$stateParams,$log,$interval) {
-    $scope.tiempo=60;
+  .controller('LlamadaLlamandoCtrl', function ($scope,$stateParams,$log,$interval,$timeout) {
+    $scope.tiempo=20;
     var alto;
     $scope.numero = $stateParams.numero;
     $log.debug($stateParams);
@@ -19,6 +19,12 @@ angular.module('smartPointViewsApp')
         alto = $interval(function(){
             if($scope.tiempo>0) {
                 $scope.tiempo=$scope.tiempo -1;
+                if($scope.tiempo<6) {
+                    $scope.tiempoAgotado="alerta";
+                    $timeout(function(){
+                        $scope.tiempoAgotado="";
+                    },500);
+                } 
             } else {
                 $scope.altoContar();
             }
