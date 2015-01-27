@@ -355,7 +355,7 @@ to      { -webkit-transform: translateX(-200%); }
     width: 90%;
     height: 12%;
     border-radius: 5em;
-    margin: 5% 0% 5% 8%;
+    margin: 4% 0% 5% 8%;
     display:inline-flex;
     justify-content: space-between;
     flex-direction: row;
@@ -1169,7 +1169,7 @@ to      { -webkit-transform: translateX(-200%); }
         width:90%;
     }
     width:80%;
-    height:62%;
+    height:60%;
 }
 .recargar {
     $sizeLetter:6em;
@@ -1497,6 +1497,7 @@ to      { -webkit-transform: translateX(-200%); }
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     box-shadow: 4px 4px 80px #000;
+    border-radius: 5em;
     opacity: 0.9;
     .recargaExitosa {
         width: 22%;
@@ -1527,6 +1528,14 @@ to      { -webkit-transform: translateX(-200%); }
         color: white;
         text-align:center;
         margin-top:20%;
+    }
+    .iconoMensaje {
+        width: 20%;
+        font-size: 16em;
+        height: 30%;
+        margin: auto;
+        margin-top: 10%;
+        margin-bottom: 0%;
     }
 }
     .recargaExitosaModal {

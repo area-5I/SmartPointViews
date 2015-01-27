@@ -11,11 +11,9 @@ angular.module('smartPointViewsApp')
   .controller('RecargaRecargadorCtrl', function ($scope,$stateParams,$timeout) {
 
       $scope.empresaId = $stateParams.empresaId;
-      $scope.modalShown = false;
-      $scope.moneda=0;
-      $scope.toggleModal = function() {
-          $scope.modalShown = !$scope.modalShown;
-      };
+      $scope.successShow = false;
+      $scope.loadShow = false;
+      $scope.nocreditShow = false;
       $scope.moneda=0;
       $scope.numero="";
       
@@ -34,6 +32,20 @@ angular.module('smartPointViewsApp')
             $scope.ingresandomoneda="";
           },500);
       }
+      $scope.recargar=function() {
+        $scope.successShow=true;
+        $timeout(function(){
+            $scope.successShow=false;
+            $scope.loadShow=true;
+        },2000);
+        $timeout(function(){
+            $scope.loadShow=false;
+            $scope.nocreditShow=true;
+        },4000);
+        $timeout(function(){
+            $scope.nocreditShow=false;
+        },6000);
+      };
       //Testing functionality
       $timeout(function(){
           $scope.ingresoMoneda(1);

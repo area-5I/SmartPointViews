@@ -62,11 +62,19 @@
         </ul>
         </div>
     <div class="recargar">
-        <button type="submit" ng-click="toggleModal()"><img src="../images/otros/recargar.svg"/></button>
+        <button type="submit" ng-click="recargar()"><img src="../images/otros/recargar.svg"/></button>
         <button class="atras" ui-sref="recarga"><img src="../images/otros/atras.svg"/></button>
     </div>
 </div>
-<modal-dialog show='modalShown' width='70%' height='45%' tipemodal="recargaExitosaModal">
+<modal-dialog show='successShow' width='65%' height='40%' tipemodal="recargaExitosaModal">
     <img class="recargaExitosa" src="images/otros/icono bien.svg"/>
     <h1 class="textoRecargaExitosa">Recarga Exitosa</h1>
+</modal-dialog>
+<modal-dialog show='loadShow' width='65%' height='40%' tipemodal="recargaExitosaModal">
+    <div class="iconoMensaje"><i class="fa fa-refresh fa-inverse fa-spin"></i></div>
+    <h1 class="textoImprimirModal">Recargando....</h1>
+</modal-dialog>
+<modal-dialog show='nocreditShow' width='65%' height='40%' tipemodal="recargaExitosaModal">
+    <div class="iconoMensaje"><i class="fa fa-close fa-inverse"></i></div>
+    <h1 class="textoImprimirModal">Sin Credito...</h1>
 </modal-dialog>
