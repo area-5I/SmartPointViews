@@ -592,7 +592,7 @@ to      { -webkit-transform: translateX(-200%); }
 }
 
 .initLlamando {
-    @include flexPanel(flex,column,wrap,space-around,stretch,stretch,75%,96%,0% 0% 0% 12%,0%);
+    @include flexPanel(flex,column,wrap,space-around,stretch,stretch,78%,96%,0% 0% 0% 10%,0%);
 }
 .llamando {
     height:100%;
@@ -609,10 +609,7 @@ to      { -webkit-transform: translateX(-200%); }
 
 .colgarPanel {
     border-radius: 6em;
-    &:hover .iconPanel>img {
-        width:3em;
-        height:3em; 
-    }
+    height: 14%;
 }
 
 .colgarPanel .iconPanel>img {
@@ -622,25 +619,49 @@ to      { -webkit-transform: translateX(-200%); }
 }
 
 //Notas views
-
-#write {
-    width: 90%;
-    height: 80%;
-    font-size: 4em;
-    background: #fff;
-    border-left: .3em solid #393D39;
-    font-family: Gothic;
-    src: url(font/gothic.ttf);
-    opacity:.8;
-    border-radius: .5em;
-    padding: 0 0 0 1.5em;
-    background-image: -webkit-linear-gradient(top , transparent, transparent 49px,#E7EFF8 0);
-        
-    background-image: linear-gradient(to bottom , transparent, transparent 96%,#9C9E9C 0),radial-gradient(4% 50%, circle closest-corner, #f5f5f5, #f5f5f5 39%, transparent 0%), radial-gradient(3.9% 46%, circle closest-corner, #cccccc, #cccccc 43.5%, transparent 0%);
-    line-height: 1.6em;
+.notebook{
+    width: 100%;
+    height:80%;
+    .write {
+        position: relative;
+        width: 90%;
+        height: 100%;
+        font-size: 4em;
+        background: #fff;
+        border-left: .3em solid #393D39;
+        font-family: Gothic;
+        src: url(font/gothic.ttf);
+        opacity:.8;
+        border-radius: .5em;
+        padding: 0 0 0 1.5em;
+        background-image: -webkit-linear-gradient(top , transparent, transparent 49px,#E7EFF8 0);
+            
+        background-image: linear-gradient(to bottom , transparent, transparent 96%,#9C9E9C 0),radial-gradient(4% 50%, circle closest-corner, #f5f5f5, #f5f5f5 39%, transparent 0%), radial-gradient(3.9% 46%, circle closest-corner, #cccccc, #cccccc 43.5%, transparent 0%);
+        line-height: 1.6em;
         -webkit-background-size:  100% 1.6em;
-            background-size: 100% 1.6em;
-                                                
+        background-size: 100% 1.6em;
+    }
+
+    .iconoImprimir {
+        position:absolute;
+        height: 4%;
+        border-radius: 1em 1em 0 0;
+        background-color: $colorGreen;
+        color: #fff;
+        font-size:2em;
+        width: 20%;
+        top: 23.5%;
+        left: 66%;
+        img {
+            float:left;
+            width:1.3em;
+            height:1.3em;
+            margin: 0em 1em 0em 1em;
+        } 
+        p {
+            float:left;
+        }
+    }
 }
 
 .keyboardDirective {
@@ -820,54 +841,37 @@ to      { -webkit-transform: translateX(-200%); }
 }
 
 .buttonNotas {
-    height:6.6%;
-    .iconoImprimir {
-        height: 95%;
-        border-radius: 3em;
-        background-color: $colorGreen;
-        color: #fff;
-        font-size:2.54em;
-        display:inline-block;
-        width: 40%;
-        margin-right: 5%;
-        img {
-            float:left;
-            width:1.3em;
-            height:1.3em;
-            margin: 0em 1em 0em 2em;
-        } 
-        p {
-            float:left;
-        }
-    }
+    height:15%;
     .iconoColgar {
         height: 90%;
-        width: 40%;
-        display:inline-block;
+        width: 50%;
         background-color: $colorRed;
-        border-radius: 3em;
+        border-radius: 6em;
         margin-right: 5%;
+        margin-left: 25%;
+        float: left;
         img {
-            width:4em;
-            height:4em;
+            width:10em;
+            height:10em;
         } 
     }
     .iconoAtras {
-        height: 95%;
-        width: 8%;
-        display:inline-block;
+        height: 90%;
+        width: 15%;
         background-color: $colorGreen;
-        border-radius: 3em;
+        border-radius: 6em;
+        float: left;
         img {
-            width:3em;
-            height:3em;
+            width:6em;
+            height:6em;
         } 
     }
 }
 //view of juegos
 .juegos {
-    width:100%;
-    height:80%;
+    width:90%;
+    height:70%;
+    margin-left: 5%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -979,12 +983,15 @@ to      { -webkit-transform: translateX(-200%); }
 }
 
 .ubicacionPanel {
-    height: 80%;
-    width:90%;
-    margin-left:5%;
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index:-1;
     img {
         width: 100%;
-        height: 90%;
+        height: 100%;
     }
     .animate {
       -webkit-animation: animation 1000ms linear both;
@@ -992,28 +999,31 @@ to      { -webkit-transform: translateX(-200%); }
     }
 }
 .atrasUbicacion {
-    height:20%;
+    margin-top: 75%;
+    height:15%;
     width:100%;
     .iconoColgar {
-        width: 60%;
-        height: 80%;
+        width: 50%;
+        height: 90%;
         background-color:$colorRed;
         border-radius: 8em;
-        margin-left: 5%;
+        margin-left: 25%;
+        float:left;
         img {
             width: 12em;
             height: 8em;
         }
     }
     .iconoAtras {
-        width: 15%;
-        height: 80%;
+        width: 13%;
+        height: 85%;
         background-color:$colorGreen;
         border-radius:8em;
-        margin-left: 5%;
+        margin-left: 3%;
+        float: left;
         img {
-            width: 8em;
-            height: 8em;
+            width: 6em;
+            height: 6em;
         }
     }
 }

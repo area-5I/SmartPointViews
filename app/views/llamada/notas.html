@@ -1,10 +1,13 @@
 <div class="initLlamando">
-    <textarea ng-click="hideKeyboard()" ng-model="miTexto" id="write" rows="6" cols="60"></textarea>
-    <div class="buttonNotas">
+    <div class="notebook">
         <button class="iconoImprimir" ng-click="imprimirTexto()">
             <img src="images/otros/imprimir.svg"/>
             <p>IMPRIMIR</p>
         </button>
+        <textarea ng-click="hideKeyboard()" ng-model="miTexto" class="write" rows="6" cols="60">
+        </textarea>
+    </div>
+    <div class="buttonNotas">
         <button ui-sref="llamadas" class="iconoColgar" ng-click="colgar()">
             <img src="images/otros/colgar.svg"/>
         </button>
