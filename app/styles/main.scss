@@ -48,14 +48,14 @@ $colorRed:#e41f25;
 }
 
 @mixin flexChild($order,$flex,$align,$height,$margin,$padding) {
-    -webkit-box-ordinal-group: $order;
-    -webkit-order: $order;
-    order: $order;
-    -webkit-box-flex: 0;
-    -webkit-flex: $flex;
-    flex: $flex;
-    -webkit-align-self: $align;
-    align-self: $align;
+    //-webkit-box-ordinal-group: $order;
+    //-webkit-order: $order;
+    //order: $order;
+    //-webkit-box-flex: 0;
+    //-webkit-flex: $flex;
+    //flex: $flex;
+    //-webkit-align-self: $align;
+    //align-self: $align;
     height:$height;
     margin: $margin;
     padding: $padding;
@@ -73,6 +73,7 @@ $colorRed:#e41f25;
 body {
     font: 71%/1.5 Gothic;
     height:100vh;
+    overflow: hidden;
 }
 
 .container {
@@ -150,7 +151,7 @@ button:focus {
 }
 
 .telefono {
-    height:90%;
+    height:95%;
     width:100%;
 }
 
@@ -200,18 +201,88 @@ to      { -webkit-transform: translateX(-200%); }
     animation:slideOutLeft 0.5s both ease;   
 }
 //-----------------------------
+//.Panel.change {
+//    width: 15%;
+//    margin: auto;
+//    transition: all 1s linear;
+//    .name {
+//        opacity: 0;
+//        transition: all 1s linear;
+//    }
+//}
+.greenPanel.change {
+    width: 10%;
+    height:12%;
+    transform: translate(-60%,500%);
+    transition: all 1s cubic-bezier(.77,.13,.06,.99);
+    .name {
+        display:none;
+        transition: all 1s cubic-bezier(.77,.13,.06,.99);
+    }
+    .iconPanel>img {
+        float:none;
+        width:1.5em;
+        height:1.5em;
+    }
+}
+.orangePanel.change {
+    width: 10%;
+    height:12%;
+    transform: translate(65%,340%);
+    transition: all 1s cubic-bezier(.77,.13,.06,.99);
+    .name {
+        display:none;
+        transition: all 1s cubic-bezier(.77,.13,.06,.99);
+    }
+    .iconPanel>img {
+        float:none;
+        width:1.5em;
+        height:1.5em;
+    }
+}
+.redPanel.change {
+    width: 10%;
+    height:12%;
+    transform: translate(180%,180%);
+    transition: all 1s cubic-bezier(.77,.13,.06,.99);
+    .name {
+        display:none;
+        transition: all 1s cubic-bezier(.77,.13,.06,.99);
+    }
+    .iconPanel>img {
+        float:none;
+        width:1.5em;
+        height:1.5em;
+    }
+}
+.bluePanel.change {
+    width: 10%;
+    height:12%;
+    transform: translate(300%,20%);
+    transition: all 1s cubic-bezier(.77,.13,.06,.99);
+    .name {
+        display:none;
+        transition: all 1s cubic-bezier(.77,.13,.06,.99);
+    }
+    .iconPanel>img {
+        float:none;
+        width:1.5em;
+        height:1.5em;
+    }
+}
+//----------------------------
 
 .init {
     @include flexPanel(flex,column,wrap,space-around,stretch,stretch,100%,100%,0%,0);
-    transition: all 1s linear;
 }
 
 .initReposo {
-    @include flexPanel(inline-flex,row,wrap,space-around,stretch,stretch,100%,12%,100% 0% 0% 0%,0);
+    @include flexPanel(inline-flex,row,wrap,space-around,stretch,stretch,100%,none,100% 0% 0% 0%,0);
     .Panel {
         height:100%;
         margin:0;
         padding: 0.2em 0.8em;
+        width: 10%;
         &:hover {
             .iconPanel>img {
                 width:1.6em;
@@ -222,9 +293,9 @@ to      { -webkit-transform: translateX(-200%); }
             display:none;
         }
         .iconPanel>img {
-            float:none;
-            width:1.5em;
+            width:1.6em;
             height:1.5em;
+            margin: .3em auto;
         }
     }
 }
@@ -232,11 +303,15 @@ to      { -webkit-transform: translateX(-200%); }
 .Panel {
     @include flexChild(1,0 1 auto,stretch,15%,2% 15%, 2% 5%);
     color: #ffffff;
+    width: 60%;
     border-radius: 0.5em;
     font-size: 6em;
     text-decoration: none;
     display: inline-flex;
-    transition: all 4s linear;
+    transition: all 1s cubic-bezier(.77,.13,.06,.99);
+    .name {
+    transition: all 1s cubic-bezier(.77,.13,.06,.99);
+    }
 }
 
 .Panel .name>p{
@@ -251,12 +326,6 @@ to      { -webkit-transform: translateX(-200%); }
     height: 2em;
     float: right;
     margin:0.2em 0;
-}
-
-.Panel:hover .iconPanel>img {
-    transition: all 0.2s ease-out;
-    width:2.1em;
-    height:2.1em;
 }
 
 .greenPanel {
@@ -278,7 +347,7 @@ to      { -webkit-transform: translateX(-200%); }
 /* Llamadas views*/
 .teclado {
     width: 85%;
-    height: 99%;
+    height: 94%;
     margin: 2% 5%;
 }
 
@@ -516,7 +585,7 @@ to      { -webkit-transform: translateX(-200%); }
 }
 
 .initLlamando {
-    @include flexPanel(flex,column,wrap,space-around,stretch,stretch,75%,100%,0% 0% 0% 12%,0%);
+    @include flexPanel(flex,column,wrap,space-around,stretch,stretch,75%,96%,0% 0% 0% 12%,0%);
 }
 .llamando {
     height:100%;
@@ -1120,7 +1189,7 @@ to      { -webkit-transform: translateX(-200%); }
 }
 
 .initEmergencia {
-    @include flexPanel(flex,column,wrap,space-around,stretch,stretch,100%,70%,15% 0% 0% 0%,0);
+    @include flexPanel(flex,column,wrap,space-around,stretch,stretch,100%,70%,12% 0% 0% 0%,0);
     transition: all 1s linear;
 }
 .initEmergencia .Panel {
@@ -1161,7 +1230,7 @@ to      { -webkit-transform: translateX(-200%); }
 }
 
 .llamandoEmergencia {
-    @include flexPanel(flex,column,wrap,space-around,stretch,stretch,70%,100%,8% 0% 0% 15%,0);
+    @include flexPanel(flex,column,wrap,space-around,stretch,stretch,70%,96%,8% 0% 0% 15%,0);
     font-size: 4em;
     .textLlamada {
         margin-bottom:0;
@@ -1250,7 +1319,7 @@ to      { -webkit-transform: translateX(-200%); }
 }
 
 .initAyuda {
-    @include flexPanel(flex,column,wrap,space-between,center,stretch,100%,85%,2% 0% 0% 0%,0);
+    @include flexPanel(flex,column,wrap,space-between,center,stretch,100%,82%,2% 0% 0% 0%,0);
     transition: all 1s linear;
 }
 .initAyuda .Panel {
@@ -1285,8 +1354,7 @@ to      { -webkit-transform: translateX(-200%); }
 //Ayuda Buscar
 .buscarAyuda {
     width: 100%;
-    height:100%;
-    @include flexPanel(flex,column,wrap,space-between,center,stretch,80%,98%,5% 0% 0% 8%,0);
+    @include flexPanel(flex,column,wrap,space-between,center,stretch,80%,95%,5% 0% 0% 8%,0);
     .entradaBuscar {
         @include flexChild(1,0 1 auto,stretch,12%,0% 0% 0% 4%,0);
         width:90%;

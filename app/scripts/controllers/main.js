@@ -8,13 +8,18 @@
  * Controller of the smartPointViewsApp
  */
 angular.module('smartPointViewsApp')
-  .controller('MainCtrl', function ($scope,changeColorHeader,$log,$interval) {
+  .controller('MainCtrl', function ($scope,changeColorHeader,$log,$timeout) {
     $scope.reposo="init";
     changeColorHeader.setColor("inicioHeader");
     $scope.headerColor = function() {
         return changeColorHeader.getColor();
     };
-    $interval(function(){
+    $timeout(function(){
+        //$scope.reposo="initReposo";
+        $scope.changePosition="change";
+    },4000);
+    $timeout(function(){
         $scope.reposo="initReposo";
-    },5000);
+        $scope.changePosition="";
+    },4950);
 });
