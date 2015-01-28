@@ -103,7 +103,7 @@ angular
         return function(scope, element, attrs) {
             var format, timeoutId;
             function updateTime() {
-                element.text(dateFilter(new Date(),"HH:mm:ss '|' MM/dd/yy"));
+                element.text(dateFilter(new Date(),"HH:mm:ss"));
             }
             function updateLater() {
                 timeoutId = $timeout(function() {
