@@ -9,6 +9,38 @@
     opacity: 0;
 }
 
+@-webkit-keyframes blinker {
+    0% {opacity:0;}
+    25% {opacity:.5;}
+    50% {opacity:1;}
+    75% {opacity:.5;}
+    100% {opacity:0;}
+} 
+
+@keyframes blinker {
+    0% {opacity:0;}
+    25% {opacity:.5;}
+    50% {opacity:1;}
+    75% {opacity:.5;}
+    100% {opacity: 0;}
+} 
+
+@-webkit-keyframes blinker2 {
+    0% {opacity:1;}
+    25% {opacity:.5;}
+    50% {opacity:0;}
+    75% {opacity:.5;}
+    100% {opacity: 1;}
+} 
+
+@keyframes blinker2 {
+    0% {opacity:1;}
+    25% {opacity:.5;}
+    50% {opacity:0;}
+    75% {opacity:.5;}
+    100% {opacity: 1;}
+} 
+
 .ng-modal-dialog {
     z-index:10000;
     position: absolute;
@@ -22,6 +54,7 @@
     box-shadow: 4px 4px 80px #000;
     border-radius: 3em;
     opacity: 0.9;
+    transition: all 500ms linear;
     .recargaExitosa {
         width: 22%;
         height: 40%;
@@ -29,12 +62,28 @@
         margin-top:20%;
         margin-left:10%;
     }
+    .imprimirModalImgPaper1 {
+        width: 25%;
+        height: 25%;
+        display: block;
+        margin: 0 auto;
+        margin-top: 5%;
+        margin-bottom: -15%;
+        animation: blinker 1s infinite;
+    }
+    .imprimirModalImgPaper2 {
+        width: 25%;
+        height: 25%;
+        display: block;
+        margin: 0 auto;
+        animation: blinker2 1s infinite;
+    }
     .imprimirModalImg {
-        width: 45%;
-        height: 20%;
-        display:block;
-        margin:auto;
-        margin-top:10%;
+        width: 50%;
+        height: 50%;
+        display: block;
+        margin: auto;
+        margin-bottom: -15%;
     }
     .textoImprimirModal {
         width: 100%;
@@ -60,6 +109,9 @@
         margin-top: 10%;
         margin-bottom: 0%;
     }
+}
+.ng-modal.ng-hide .ng-modal-dialog {
+    top: -50%; 
 }
 .orangeModal {
     background-color:$colorOrange;
