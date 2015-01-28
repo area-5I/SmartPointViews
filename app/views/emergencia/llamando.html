@@ -1,6 +1,6 @@
 <div class="llamandoEmergencia">
-    <p class="textLlamada">...LLAMANDO</p>
-    <a class="redPanel Panel">
+    <p class="textLlamada" ng-show="llamandoClick">...LLAMANDO</p>
+    <a ng-click="emergencia()" class="redPanel Panel">
         <div class="name">
             <p>{{tipoEmergencia}}</p>
         </div>
@@ -22,7 +22,12 @@
             </li>
         </ul>
     </div>
-    <button ui-sref="emergencia" class="emergenciaColgar redPanel">
-        <img src="../images/otros/colgar.svg"/>
-    </button>
+    <div class="buttonEmergencia">
+        <button ng-click="colgar()" class="emergenciaColgar redPanel" ng-show="llamandoClick">
+            <img src="../images/otros/colgar.svg"/>
+        </button>
+        <div ui-sref="emergencia" class="atrasEmergencia" ng-hide="llamandoClick">
+            <button class="atras redPanel"><img src="../images/otros/atras.svg"/></button>
+        </div>
+    </div>
 </div>

@@ -13,8 +13,8 @@
 }
 
 .atrasEmergencia {
-    height: 20%;
-    width: 25%;
+    height: 15%;
+    width: 20%;
     margin:auto;
     .atras {
         width:100%;
@@ -54,7 +54,12 @@
         margin-bottom:0;
         position:absolute;
         transform:translateY(-1.4em);
+        transition: all 500ms linear;
     }
+    .textLlamada.ng-hide {
+        opacity: 0;
+    }
+
     .Panel {
         font-size:1.5em;
         height:15%;
@@ -119,13 +124,47 @@
                 }
         }
     }
-    .emergenciaColgar {
-        @include flexChild(1,0 1 auto,stretch,11%,0 auto,0);
-       width: 35%;
-       border-radius:3em;
-       img {
-            width:16em;
-            height:9em;
-       }
+    .buttonEmergencia {
+        width:100%;
+        height: 13%;
+        .emergenciaColgar {
+            width: 35%;
+            border-radius:3em;
+            margin-right:30%;
+            display:inline-block;
+            transition: all 250ms ease-out;
+            float:right;
+            img {
+                width:16em;
+                height:9em;
+            }
+        }
+        .emergenciaColgar.ng-hide {
+            margin-right:-50%;
+            opacity: 0;
+        }
+
+        .atrasEmergencia {
+            height: 100%;
+            width: 25%;
+            margin-top: 0;
+            margin-left: 34%;
+            margin-bottom: 0;
+            float: left;
+            .atras {
+                width:100%;
+                height:100%;
+                border-radius: 50%;
+                img {
+                    width: 60%;
+                    height: 60%;
+                    margin: 5%;
+                }
+            }
+            transition: all 250ms ease-out;
+        }
+        .atrasEmergencia.ng-hide {
+            margin-left:-50%;
+        }
     }
 }

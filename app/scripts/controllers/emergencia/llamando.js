@@ -51,5 +51,12 @@ angular.module('smartPointViewsApp')
       }
       $scope.llamar=function(index) {
             $location.path('/llamada/llamando/'+$scope.emergencias[$scope.tipoEmergencia][index].telefono);
-      };
+      }
+      $scope.llamandoClick=false;
+      $scope.emergencia=function() {
+            $scope.llamandoClick=true;
+      }
+      $scope.colgar=function() {
+            $scope.llamandoClick=false;
+      }
   });
