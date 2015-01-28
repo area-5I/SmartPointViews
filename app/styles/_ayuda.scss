@@ -172,36 +172,36 @@
 .titleCountry {
     color:white;
     width:100%;
-    font-size: 2.8em;
+    font-size: 2em;
     height:8%;
     .pais-flag {
         margin-top:.2em;
-        width: 2.4em;
-        height: 2.4em;
+        width: 2.6em;
+        height: 2.6em;
         border-radius:2em;
         float:left;
-        margin-left:25%;
+        margin-left:18%;
         margin-right:3%;
     }
 }
 .statesPanel {
     color:white;
     width: 97.5%;
-    height: 88%;
-    margin-top: 2%;
+    height: 89%;
+    margin-top: 1%;
     background-color:#5d5d5d;
-    border-radius: 0 0 4em 4em;
+    border-radius: 0 0 3em 3em;
     .statesList {
         height:100%;
         .stateItem {
             list-style:none;
             text-decoration:none;
             height: 8%;
-            font-size: 3em;
+            font-size: 2.4em;
             padding:.5em 0em 0em .3em;
             border-bottom: 0.2em solid white;
             .stateName {
-                width: 62%;
+                width: 65%;
                 height:80%;
                 h3 {
                     height:100%;
@@ -216,9 +216,9 @@
             }
             .stateUse {
                 float: right;
-                width: 36%;
-                margin-top:.6em;
-                height:75%;
+                width: 30%;
+                margin-top:1em;
+                height:70%;
                 color:#5d5d5d;
                 background-color: white;
                 border-radius: .5em .5em 0 0;
@@ -232,6 +232,60 @@
                     margin-top:.4em;
                     float: right;
                 }
+            }
+        }
+    }
+}
+.servicePanel {
+    width: 97%;
+    height: 100%;
+    font-size: 2em;
+    color:white;
+    .serviceName {
+        height: 10%;
+        width:50%;
+        margin: 0 auto;
+        margin-bottom: 1em;
+        .fa {
+            font-size: 2em;
+            float: left;
+            margin-top: .2em;
+            margin-right: .2em;
+        }
+    }
+    .serviceAddress {
+        margin-top:.3em;
+        height: 7%;
+        background-color:#5d5d5d;
+        font-size: 1.4em;
+        .fa {
+            float:left;
+            margin: 0 .5em;
+        }
+    }
+    .servicePhones {
+        width: 100%;
+        height: 64%;
+        margin-top:.3em;
+        border-radius:0 0 1.6em 1.6em;
+        background-color:#5d5d5d;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        align-items: center;
+        .itemPhone {
+            font-size:1.5em;
+            list-style:none;
+            text-decoration:none;
+            width:42%;
+            height:20%;
+            line-height:1.3em;
+            .fa {
+                font-size:1.5em;
+                margin: 0 .2em;
+                float:left;
             }
         }
     }

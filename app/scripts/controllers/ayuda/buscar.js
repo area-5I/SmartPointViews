@@ -10,6 +10,9 @@
 angular.module('smartPointViewsApp')
   .controller('AyudaBuscarCtrl', function ($scope,$stateParams) {
     $scope.servicio=$stateParams.servicio;
+    $scope.showKeyboardpanel=false;
+    $scope.statesShow=true;
+    $scope.serviceShow=false;
     $scope.search={name:""};
     if($scope.servicio=="codigos") {
         $scope.servicios=[
@@ -94,8 +97,6 @@ angular.module('smartPointViewsApp')
         {name:"kochalita",number:4787989,direccion:"Av. Panamericana #122"}
         ];
     };
-    $scope.showKeyboardpanel=false;
-    $scope.statesShow=true;
     $scope.hideKeyboard=function() {
         $scope.showKeyboardpanel=false;
     };
