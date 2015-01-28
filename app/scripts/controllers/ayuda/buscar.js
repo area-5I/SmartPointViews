@@ -95,10 +95,15 @@ angular.module('smartPointViewsApp')
         ];
     };
     $scope.showKeyboardpanel=false;
+    $scope.statesShow=true;
     $scope.hideKeyboard=function() {
         $scope.showKeyboardpanel=false;
     };
     $scope.togglekeyboard=function() {
         $scope.showKeyboardpanel=!$scope.showKeyboardpanel;
+    };
+    $scope.deleteX=function() {
+        $scope.search.name="";
+        $scope.deleteShow="false";
     };
   });

@@ -1,5 +1,9 @@
 <div class="buscarAyuda">
-    <input ng-model="search.name" type="text" class="entradaBuscar" ng-click="togglekeyboard()"/>
+    <div class="buscador">
+        <i class="fa fa-search fa-inverse search"></i>
+        <input ng-model="search.name" type="text" class="entradaBuscar" ng-click="togglekeyboard()"/>
+        <i class="fa fa-times-circle fa-inverse delete" ng-show="deleteShow" ng-click="deleteX()"></i>
+    </div>
     <div class="serviciosPanel" ng-click="hideKeyboard()">
         
         <div class="pais-box" ng-repeat="itemServicio in servicios |filter:search">
@@ -18,3 +22,50 @@
     <div ui-sref="ayuda" class="atrasAyuda"><img src="images/otros/atras.svg"/></div>
 </div>
 <keyboard input-text="search.name" show-keyboard-panel="showKeyboardpanel" type-execute="find"></keyboard>
+<modal-dialog show='statesShow' width='70%' height='80%' tipemodal="blueModal">
+    <div class="titleCountry"><span class="pais-flag bo"></span><h1> Bolivia</h1></div>
+    <div class="statesPanel">
+        <ul class="statesList">
+            <li class="stateItem">
+                <div class="stateName">
+                    <i class="fa fa-chevron-right"></i>
+                    <h3>La Paz</h3>
+                </div>
+                <div class="stateUse">
+                    <h3>Usar Codigo</h3>
+                    <i class="fa fa-check"></i>
+                </div>
+            </li> 
+            <li class="stateItem">
+                <div class="stateName">
+                    <i class="fa fa-chevron-right"></i>
+                    <h3>Santa Cruz</h3>
+                </div>
+                <div class="stateUse">
+                    <h3>Usar Codigo</h3>
+                    <i class="fa fa-check"></i>
+                </div>
+            </li> 
+            <li class="stateItem">
+                <div class="stateName">
+                    <i class="fa fa-chevron-right"></i>
+                    <h3>Cochabamba</h3>
+                </div>
+                <div class="stateUse">
+                    <h3>Usar Codigo</h3>
+                    <i class="fa fa-check"></i>
+                </div>
+            </li> 
+            <li class="stateItem">
+                <div class="stateName">
+                    <i class="fa fa-chevron-right"></i>
+                    <h3>Sucre</h3>
+                </div>
+                <div class="stateUse">
+                    <h3>Usar Codigo</h3>
+                    <i class="fa fa-check"></i>
+                </div>
+            </li> 
+        </ul>   
+    </div>
+</modal-dialog>

@@ -41,18 +41,42 @@
 .buscarAyuda {
     width: 100%;
     @include flexPanel(flex,column,wrap,space-between,center,stretch,80%,95%,5% 0% 0% 8%,0);
-    .entradaBuscar {
-        @include flexChild(1,0 1 auto,stretch,12%,0% 0% 0% 4%,0);
-        width:90%;
-        border-radius:4em;
-        border: 0.1em $colorBlue solid;
+    .buscador {
+        @include flexChild(1,0 1 auto,stretch,10%,0% 0% 0% 4%,0);
+        width:95%;
         font-size: 5em;
-        text-align:center;
-        opacity:.5;
         background-color: black;
-        color: $colorBlue;
-        &:focus {
+        opacity:.5;
+        border: 0.1em $colorBlue solid;
+        border-radius:4em;
+        .entradaBuscar {
+            font-size: 1em;
+            width:76%;
+            height: 90%;
+            text-align:center;
+            background-color: transparent !important;
+            color: $colorBlue;
+            border: 0px solid transparent;
+        }
+        .search {
+            font-size:1.4em;
+            margin-top: .2em;
+            float:left;
+            margin-left:.2em;
+        }
+        .delete {
+            font-size:1.4em;
+            margin-top: .2em;
+            float:right;
+            margin-right:.2em;
+            &:active {
+                margin-top:.1em;
+                font-size:1.5em;
+            }
+        }
+        &>input:focus {
             outline: 0px solid transparent;
+            border: 0px solid transparent;
         }
     }
     
@@ -141,6 +165,74 @@
         img {
             width: 90%;
             height: 100%;
+        }
+    }
+}
+
+.titleCountry {
+    color:white;
+    width:100%;
+    font-size: 2.8em;
+    height:8%;
+    .pais-flag {
+        margin-top:.2em;
+        width: 2.4em;
+        height: 2.4em;
+        border-radius:2em;
+        float:left;
+        margin-left:25%;
+        margin-right:3%;
+    }
+}
+.statesPanel {
+    color:white;
+    width: 97.5%;
+    height: 88%;
+    margin-top: 2%;
+    background-color:#5d5d5d;
+    border-radius: 0 0 4em 4em;
+    .statesList {
+        height:100%;
+        .stateItem {
+            list-style:none;
+            text-decoration:none;
+            height: 8%;
+            font-size: 3em;
+            padding:.5em 0em 0em .3em;
+            border-bottom: 0.2em solid white;
+            .stateName {
+                width: 62%;
+                height:80%;
+                h3 {
+                    height:100%;
+                }
+                .fa {
+                    margin-top:.3em;
+                    float:left;
+                    margin-right:.2em;
+                }
+                margin-top: .2em;
+                float:left;
+            }
+            .stateUse {
+                float: right;
+                width: 36%;
+                margin-top:.6em;
+                height:75%;
+                color:#5d5d5d;
+                background-color: white;
+                border-radius: .5em .5em 0 0;
+                line-height: 1.5em;
+                h3 {
+                    float: right;
+                    font-size:.8em;
+                    margin-right: .3em;
+                }
+                .fa {
+                    margin-top:.4em;
+                    float: right;
+                }
+            }
         }
     }
 }
