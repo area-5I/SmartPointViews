@@ -14,6 +14,9 @@ angular.module('smartPointViewsApp')
     $scope.headerColor = function() {
         return changeColorHeader.getColor();
     };
+    $scope.blurry=function() {
+        return changeColorHeader.getBlurry();
+    }
     $timeout(function(){
         //$scope.reposo="initReposo";
         $scope.changePosition="change";

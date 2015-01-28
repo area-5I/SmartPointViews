@@ -88,14 +88,21 @@ angular
   })
     .service('changeColorHeader', function ($log) {
         var property = "inicioHeader";
-
+        var blurry="";
         return {
             getColor:function () {
                 return property;
             },
             setColor:function (value) {
                 property = value;
-                $log.debug(property);
+                if(value=="inicioHeader") {
+                    blurry="";
+                } else {
+                    blurry="withBlurry";
+                }
+            },
+            getBlurry:function () {
+                return blurry;
             }
         };
     })

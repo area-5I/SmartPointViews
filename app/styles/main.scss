@@ -90,6 +90,12 @@ video#videoFondo {
     width: auto; height: auto; z-index: -100;
     background-size: cover;
 }
+
+.withBlurry {
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+}
+
 button {
     background: none;
     border: 0;
