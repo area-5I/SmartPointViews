@@ -11,7 +11,7 @@ angular.module('smartPointViewsApp')
   .controller('AyudaBuscarCtrl', function ($scope,$stateParams) {
     $scope.servicio=$stateParams.servicio;
     $scope.showKeyboardpanel=false;
-    $scope.statesShow=true;
+    $scope.statesShow=false;
     $scope.serviceShow=false;
     $scope.search={name:""};
     if($scope.servicio=="codigos") {
@@ -106,5 +106,13 @@ angular.module('smartPointViewsApp')
     $scope.deleteX=function() {
         $scope.search.name="";
         $scope.deleteShow="false";
+    };
+    $scope.selectItem=function(index) {
+        $scope.selectedItem=$scope.servicios[index];
+        if($scope.servicio=="codigos") {
+            $scope.statesShow=true;
+        } else {
+            $scope.serviceShow=true;
+        }
     };
   });

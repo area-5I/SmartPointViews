@@ -5,17 +5,19 @@
         <i class="fa fa-times-circle fa-inverse delete" ng-show="deleteShow" ng-click="deleteX()"></i>
     </div>
     <div class="serviciosPanel" ng-click="hideKeyboard()">
-        
-        <div class="pais-box" ng-repeat="itemServicio in servicios |filter:search">
-            <div class="pais-flagbox" ng-if="itemServicio.code!=null">
-                <span class="pais-flag {{itemServicio.code}}"></span>
-            </div>
-            <div class="pais-title"><i ng-if="icon!=null" class="fa fa-{{icon}} fa-lg"></i> {{itemServicio.name}}</div>
-            <div class="pais-number" ng-if="itemServicio.code!=null">{{itemServicio.number}}</div>
-            <div class="call-servicio" ng-if="itemServicio.code!=null"></div>
-            <div class="direccion-servicio" ng-if="servicio!='codigos'">
-                <p class="direccion-name"><i class="fa fa-home fa-fw"></i>{{itemServicio.direccion}}</p>
-                <p class="direccion-number"><i class="fa fa-phone fa-fw"></i>{{itemServicio.number}}</p>
+        <div class="inner">
+            <div class="pais-box" ng-click="selectItem($index)" ng-repeat="itemServicio in servicios |filter:search">
+                <div class="pais-flagbox" ng-if="itemServicio.code!=null">
+                    <span class="pais-flag {{itemServicio.code}}"></span>
+                </div>
+                <div class="pais-title"><i ng-if="icon!=null" class="fa fa-{{icon}} fa-lg"></i> {{itemServicio.name}}</div>
+                <i ng-if="servicio!='codigos'" class="fa fa-chevron-circle-right fa-fw go fa-inverse"></i>
+                <div class="pais-number" ng-if="itemServicio.code!=null">{{itemServicio.number}}</div>
+                <div class="call-servicio" ng-if="itemServicio.code!=null"></div>
+                <div class="direccion-servicio" ng-if="servicio!='codigos'">
+                    <p class="direccion-name"><i class="fa fa-home fa-fw"></i>{{itemServicio.direccion}}</p>
+                    <p class="direccion-number"><i class="fa fa-phone fa-fw"></i>{{itemServicio.number}}</p>
+                </div>
             </div>
         </div>
     </div>
@@ -24,7 +26,7 @@
 <keyboard input-text="search.name" show-keyboard-panel="showKeyboardpanel" type-execute="find"></keyboard>
 
 <modal-dialog show='statesShow' width='70%' height='80%' tipemodal="blueModal">
-    <div class="titleCountry"><span class="pais-flag bo"></span><h1> Bolivia  +571</h1></div>
+    <div class="titleCountry"><span class="pais-flag {{selectedItem.code}}"></span><h1> {{selectedItem.name}}  +{{selectedItem.number}}</h1></div>
     <div class="statesPanel">
         <ul class="statesList">
             <li class="stateItem">
@@ -72,9 +74,9 @@
 </modal-dialog>
 <modal-dialog show='serviceShow' width='60%' height='40%' tipemodal="blueModal">
     <div class="servicePanel">
-        <div class="serviceName"><i class="fa fa-cutlery"></i><h1>Dumbo</h1></div>
-        <div class="serviceAddress"><i class="fa fa-home"></i><h6>Av. Dominicana #445</h6></div>
-        <div class="serviceAddress"><i class="fa fa-globe"></i><h6>www.dumbo.com.bo</h6></div>
+        <div class="serviceName"><i class="fa fa-{{icon}}"></i><h1>{{selectedItem.name}}</h1></div>
+        <div class="serviceAddress"><i class="fa fa-home"></i><h6>{{selectedItem.direccion}}</h6></div>
+        <div class="serviceAddress"><i class="fa fa-globe"></i><h6>www.{{selectedItem.name}}.com.bo</h6></div>
         <ul class="servicePhones">
             <li class="itemPhone"><i class="fa fa-phone-square"></i>77334561</li>
             <li class="itemPhone"><i class="fa fa-phone-square"></i>77334561</li>
