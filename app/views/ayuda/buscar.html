@@ -4,19 +4,34 @@
         <input ng-model="search.name" type="text" class="entradaBuscar" ng-click="togglekeyboard()"/>
         <i class="fa fa-times-circle fa-inverse delete" ng-show="deleteShow" ng-click="deleteX()"></i>
     </div>
-    <div class="serviciosPanel" ng-click="hideKeyboard()">
+    <div class="serviciosPanel" ng-click="hideKeyboard()" ng-if="icon==null">
         <div class="inner">
             <div class="pais-box" ng-click="selectItem($index)" ng-repeat="itemServicio in servicios |filter:search">
                 <div class="pais-flagbox" ng-if="itemServicio.code!=null">
                     <span class="pais-flag {{itemServicio.code}}"></span>
                 </div>
-                <div class="pais-title"><i ng-if="icon!=null" class="fa fa-{{icon}} fa-lg"></i> {{itemServicio.name}}</div>
-                <i ng-if="servicio!='codigos'" class="fa fa-chevron-circle-right fa-fw go fa-inverse"></i>
+                <div class="pais-title">{{itemServicio.name}}</div>
                 <div class="pais-number" ng-if="itemServicio.code!=null">{{itemServicio.number}}</div>
                 <div class="call-servicio" ng-if="itemServicio.code!=null"></div>
-                <div class="direccion-servicio" ng-if="servicio!='codigos'">
-                    <p class="direccion-name"><i class="fa fa-home fa-fw"></i>{{itemServicio.direccion}}</p>
-                    <p class="direccion-number"><i class="fa fa-phone fa-fw"></i>{{itemServicio.number}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="serviciosPanel" ng-click="hideKeyboard()" ng-if="icon!=null">
+        <div class="inner">
+            <div class="service-box" ng-class="animateService($index)"  ng-click="selectService($index)" ng-repeat="itemServicio in servicios |filter:search">
+                <div class="service-inner-box darkoragePanel">
+                    <div class="principal-information">
+                        <img class="image-service" ng-src="images/ayuda/{{icon}}.svg"/>
+                        <div class="title-service">"<strong>{{itemServicio.name}}</strong>"</div>
+                        <div class="motto-service">Sabor Inigualable</div>
+                    </div>
+                    <div class="secondary-information" ng-class="animateService($index
+                        )">
+                        <div class="direccion-service"><e class="subtitle-service">DIRECCION</e>{{itemServicio.direccion}}</div>
+                        <div class="phone-service"><e class="subtitle-service">TELEFONO</e><o>{{itemServicio.number}} <i class="fa fa-phone"></i></o></div>
+                        <div class="phone-service"><e class="subtitle-service">TELEFONO</e><o>79797797 <i class="fa fa-phone"></i></o></div>
+                        <div class="web-service"><e class="subtitle-service">WEB</e><o>www.{{itemServicio.name}}.com.bo</o></div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -53,26 +53,26 @@ angular.module('smartPointViewsApp')
         {name:"Colombia",code:"co",number:222}
         ];
     } else if($stateParams.servicio=='restaurantes') {
-        $scope.icon="cutlery";
+        $scope.icon="restaurant";
         $scope.servicios=[
-        {name:"Dumbo",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
-        {name:"Globos",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
-        {name:"Elis",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
-        {name:"Doña jacinta",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
-        {name:"Don Pepe",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
-        {name:"Churrasqueria Chaqueno",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
-        {name:"El manantial",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
-        {name:"Aroma",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
-        {name:"El Gordo",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
-        {name:"King Don",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
-        {name:"CasaBlanca",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
-        {name:"Pollos kikiriki",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
-        {name:"Pollos Kokoroko",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
-        {name:"El Rey",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"},
-        {name:"Wistupiku",number:4702020,direccion:"Av. Ayacucho entre jordan y calama #440"}
+        {name:"Dumbo",number:4702020,direccion:"Av. Ayacucho #440"},
+        {name:"Globos",number:4702020,direccion:"Av. Ayacucho #440"},
+        {name:"Elis",number:4702020,direccion:"Av. Ayacucho #440"},
+        {name:"Doña jacinta",number:4702020,direccion:"Av. Ayacucho #440"},
+        {name:"Don Pepe",number:4702020,direccion:"Av. Ayacucho #440"},
+        {name:"Chaqueno",number:4702020,direccion:"Av. Ayacucho #440"},
+        {name:"El manantial",number:4702020,direccion:"Av. Ayacucho #440"},
+        {name:"Aroma",number:4702020,direccion:"Av. Ayacucho #440"},
+        {name:"El Gordo",number:4702020,direccion:"Av. Ayacucho #440"},
+        {name:"King Don",number:4702020,direccion:"Av. Ayacucho #440"},
+        {name:"CasaBlanca",number:4702020,direccion:"Av. Ayacucho #440"},
+        {name:"Pollos kikiriki",number:4702020,direccion:"Av. Ayacucho #440"},
+        {name:"Pollos Kokoroko",number:4702020,direccion:"Av. Ayacucho #440"},
+        {name:"El Rey",number:4702020,direccion:"Av. Ayacucho #440"},
+        {name:"Wistupiku",number:4702020,direccion:"Av. Ayacucho #440"}
         ];
     } else if($stateParams.servicio=='mecanicos') {
-        $scope.icon="wrench";
+        $scope.icon="mecanico";
         $scope.servicios=[
         {name:"Don Luis",number:79732456,direccion:"Av. Circuvalacion #567"},
         {name:"El Choco",number:79732456,direccion:"Av. Circuvalacion #567"},
@@ -115,4 +115,18 @@ angular.module('smartPointViewsApp')
             $scope.serviceShow=true;
         }
     };
+    $scope.itemSelected=-1;
+    $scope.selectService=function(index) {
+        if($scope.itemSelected==index){
+            $scope.itemSelected=-1;
+        } else {
+            $scope.itemSelected=index;
+        }
+    };
+    $scope.animateService=function(index) {
+        if(index==$scope.itemSelected)
+            return "information";
+        else
+            return "";
+    }
   });
