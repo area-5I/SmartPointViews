@@ -13,6 +13,7 @@ $colorRed:#e41f25;
 }
 
 @mixin panel($normalColor, $hoverColor) {
+    color: white;
     & {
         background-color:$normalColor;
     }
