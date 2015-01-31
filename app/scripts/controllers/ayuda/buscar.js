@@ -8,7 +8,7 @@
  * Controller of the smartPointViewsApp
  */
 angular.module('smartPointViewsApp')
-  .controller('AyudaBuscarCtrl', function ($scope,$stateParams) {
+  .controller('AyudaBuscarCtrl',['$scope','$stateParams',function ($scope,$stateParams) {
     $scope.servicio=$stateParams.servicio;
     $scope.showKeyboardpanel=false;
     $scope.statesShow=false;
@@ -129,4 +129,4 @@ angular.module('smartPointViewsApp')
         else
             return "";
     }
-  });
+  }]);

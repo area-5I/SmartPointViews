@@ -8,7 +8,7 @@
  * Controller of the smartPointViewsApp
  */
 angular.module('smartPointViewsApp')
-  .controller('RecargaRecargadorCtrl', function ($scope,$stateParams,$timeout) {
+  .controller('RecargaRecargadorCtrl',['$scope','$stateParams','$timeout',function ($scope,$stateParams,$timeout) {
 
       $scope.empresaId = $stateParams.empresaId;
       $scope.successShow = false;
@@ -53,4 +53,4 @@ angular.module('smartPointViewsApp')
       $timeout(function(){
           $scope.ingresoMoneda(2);
       },8000);
-  });
+  }]);

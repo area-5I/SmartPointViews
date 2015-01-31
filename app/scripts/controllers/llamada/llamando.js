@@ -8,7 +8,7 @@
  * Controller of the smartPointViewsApp
  */
 angular.module('smartPointViewsApp')
-  .controller('LlamadaLlamandoCtrl', function ($scope,$stateParams,$log,$interval,$timeout) {
+  .controller('LlamadaLlamandoCtrl',['$scope','$stateParams','$log','$interval','$timeout',function ($scope,$stateParams,$log,$interval,$timeout) {
     $scope.tiempo=20;
     var alto;
     $scope.numero = $stateParams.numero;
@@ -45,4 +45,4 @@ angular.module('smartPointViewsApp')
     $log.debug($scope.numero);
     $log.debug($scope.contador);
     $scope.contar();
-});
+}]);

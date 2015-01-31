@@ -8,6 +8,6 @@
  * Controller of the smartPointViewsApp
  */
 angular.module('smartPointViewsApp')
-  .controller('RecargaCtrl', function ($scope,changeColorHeader) {
+  .controller('RecargaCtrl', ['$scope','changeColorHeader',function ($scope,changeColorHeader) {
     changeColorHeader.setColor("recargasHeader");
-  });
+  }]);

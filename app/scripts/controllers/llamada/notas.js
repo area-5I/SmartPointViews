@@ -8,7 +8,7 @@
  * Controller of the smartPointViewsApp
  */
 angular.module('smartPointViewsApp')
-  .controller('LlamadaNotasCtrl', function ($scope) {
+  .controller('LlamadaNotasCtrl',['$scope',function ($scope) {
       $scope.modalShown=false;
       $scope.imprimirTexto=function() {
           $scope.modalShown=!$scope.modalShown;
@@ -18,4 +18,4 @@ angular.module('smartPointViewsApp')
       $scope.hideKeyboard=function() {
           $scope.showkeyboardPanel = !$scope.showkeyboardPanel;
       };
-});
+}]);

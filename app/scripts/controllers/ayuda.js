@@ -8,6 +8,6 @@
  * Controller of the smartPointViewsApp
  */
 angular.module('smartPointViewsApp')
-  .controller('AyudaCtrl', function ($scope,changeColorHeader) {
+  .controller('AyudaCtrl',['$scope','changeColorHeader',function ($scope,changeColorHeader) {
     changeColorHeader.setColor("ayudaHeader");
-  });
+  }]);

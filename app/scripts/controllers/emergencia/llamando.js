@@ -8,7 +8,7 @@
  * Controller of the smartPointViewsApp
  */
 angular.module('smartPointViewsApp')
-  .controller('EmergenciaLlamandoCtrl', function ($scope,$stateParams,$location) {
+  .controller('EmergenciaLlamandoCtrl',['$location','$stateParams','$location',function ($scope,$stateParams,$location) {
       $scope.seleccionar=function(index){
           $scope.seleccion=index;
       }
@@ -59,4 +59,4 @@ angular.module('smartPointViewsApp')
       $scope.colgar=function() {
             $scope.llamandoClick=false;
       }
-  });
+  }]);

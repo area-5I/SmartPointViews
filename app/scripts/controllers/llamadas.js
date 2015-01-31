@@ -8,7 +8,7 @@
  * Controller of the smartPointViewsApp
  */
 angular.module('smartPointViewsApp')
-  .controller('LlamadasCtrl', function ($scope, $location,changeColorHeader,$timeout) {
+  .controller('LlamadasCtrl',['$scope','$location','changeColorHeader','$timeout',function ($scope, $location,changeColorHeader,$timeout) {
       changeColorHeader.setColor('llamadasHeader');
       $scope.numero="";
       $scope.moneda=0;
@@ -35,4 +35,4 @@ angular.module('smartPointViewsApp')
       $timeout(function(){
           $scope.ingresoMoneda(2);
       },8000);
-  });
+  }]);
