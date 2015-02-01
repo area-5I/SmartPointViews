@@ -1,11 +1,14 @@
 <div class="llamandoEmergencia">
     <p class="textLlamada" ng-show="llamandoClick">...LLAMANDO</p>
-    <a ng-click="emergencia()" class="redPanel Panel">
+    <a ng-click="emergencia()" class="Panel" ng-class="{redPanel:!llamandoClick, greenPanel:llamandoClick}">
         <div class="name">
             <p>{{tipoEmergencia}}</p>
         </div>
-        <div class="iconPanel">
-            <img ng-src="../images/informacion/{{tipoEmergencia}}.svg"/>
+        <div class="iconPanel" ng-if="!llamandoClick">
+           <img ng-src="images/menu/auricular.svg"/>
+        </div>
+        <div class="iconPanel" ng-if="llamandoClick">
+           <img ng-src="../images/informacion/{{tipoEmergencia}}.svg"/>
         </div>
     </a>
     <div class="privadoEmergencia">
