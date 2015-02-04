@@ -15,3 +15,4 @@ describe('Controller: AyudaBuscarCtrl', function () {
       $scope: scope
     });
   }));
+});
