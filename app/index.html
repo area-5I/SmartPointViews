@@ -21,12 +21,9 @@
     <div class="container" ng-controller="MainCtrl">
         <div class="header" ng-class="headerColor()">
             <div id="signalPanel">
-            <ul class="signal">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+                <ul class="signal">
+                    <li class="signal-item" ng-repeat="itemPotency in potency"></li>
+                </ul>
             </div>
             <div id="hourPanel">
                 <a my-current-time></a>

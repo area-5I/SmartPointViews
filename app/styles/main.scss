@@ -136,20 +136,27 @@ button:focus {
 }
 
 #signalPanel {
-    padding-right: 30%;
-    padding-left: 1%; 
+    padding-right: 8%;
+    padding-left: 1%;
+    width: 30%; 
     ul {
         @include clearSpace;
         list-style: none;
         display: inline-flex;
+        width: 100%;
         li {
-            width: 1.8em;
-            height: 1.8em;
+            width: 2em;
+            height: 2em;
             margin: 0.1em;
             background-color: #ffffff;
             border-radius: 1em;
+            transition: all 500ms linear;
+            opacity: 1;
         }
-
+        li.ng-leave, li.ng-leave-active, li.ng-enter, li.ng-enter-active {
+            opacity: 0;
+            transition: all 500ms linear;
+        }
     }
 }
 
