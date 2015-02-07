@@ -9,5 +9,5 @@
  */
 angular.module('smartPointViewsApp')
   .controller('AyudaCtrl',['$scope','changeColorHeader',function ($scope,changeColorHeader) {
-    changeColorHeader.setColor("ayudaHeader");
+    changeColorHeader.setColor('ayudaHeader');
   }]);

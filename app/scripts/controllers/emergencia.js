@@ -9,5 +9,5 @@
  */
 angular.module('smartPointViewsApp')
   .controller('EmergenciaCtrl',['$scope','changeColorHeader',function ($scope,changeColorHeader) {
-    changeColorHeader.setColor("emergenciaHeader");
+    changeColorHeader.setColor('emergenciaHeader');
   }]);

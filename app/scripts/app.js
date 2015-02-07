@@ -22,11 +22,6 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .state('about', {
-        url:'/about',
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
       .state('llamadas', {
         url:'/llamadas',
         templateUrl: 'views/llamadas.html',
@@ -86,19 +81,19 @@ angular
         templateUrl: 'views/llamada/hextris.html'
       });
   })
-    .service('changeColorHeader', function ($log) {
-        var property = "inicioHeader";
-        var blurry="";
+    .service('changeColorHeader', function () {
+        var property = 'inicioHeader';
+        var blurry='';
         return {
             getColor:function () {
                 return property;
             },
             setColor:function (value) {
                 property = value;
-                if(value=="inicioHeader") {
-                    blurry="";
+                if(value==='inicioHeader') {
+                    blurry='';
                 } else {
-                    blurry="withBlurry";
+                    blurry='withBlurry';
                 }
             },
             getBlurry:function () {
@@ -107,10 +102,10 @@ angular
         };
     })
     .directive('myCurrentTime', function($timeout, dateFilter) {
-        return function(scope, element, attrs) {
-            var format, timeoutId;
+        return function(scope, element) {
+            var timeoutId;
             function updateTime() {
-                element.text(dateFilter(new Date(),"HH:mm:ss"));
+                element.text(dateFilter(new Date(),'HH:mm:ss'));
             }
             function updateLater() {
                 timeoutId = $timeout(function() {
@@ -119,10 +114,10 @@ angular
                 }, 1000);
             }
             element.bind('$destroy', function() {
-            $timeout.cancel(timeoutId);
-        });
-        updateLater();
-    }
+                $timeout.cancel(timeoutId);
+            });
+            updateLater();
+        };
 
     })
     .directive('modalView', function() {
@@ -136,10 +131,12 @@ angular
             link: function(scope, element, attrs) {
                 scope.tipemodal = attrs.tipemodal;
                 scope.dialogStyle = {};
-                if (attrs.width)
+                if (attrs.width) {
                     scope.dialogStyle.width = attrs.width;
-                if (attrs.height)
+                }
+                if (attrs.height) {
                     scope.dialogStyle.height = attrs.height;
+                }
                 scope.hideModal = function() {
                         scope.show = false;
                     };
@@ -172,43 +169,43 @@ angular
 
                 scope.shift = function() {
                     scope.shiftActivado = !scope.shiftActivado;
-                    if(scope.shiftActivado && $scope.uppercase){
-                        scope.casse = "";
+                    if(scope.shiftActivado && scope.uppercase){
+                        scope.casse = '';
                     } else if(scope.shiftActivado && !scope.uppercase) {
-                        scope.casse = "uppercase";
+                        scope.casse = 'uppercase';
                     }
                     else if(!scope.shiftActivado && scope.uppercase){
-                        scope.casse = "uppercase";
+                        scope.casse = 'uppercase';
                     } else {
-                        scope.casse = "";
+                        scope.casse = '';
                     }
                 };
 
                 scope.capslock = function() {
                     scope.uppercase = !scope.uppercase;
-                    scope.casse = scope.uppercase ? "uppercase" : "";
+                    scope.casse = scope.uppercase ? 'uppercase' : '';
                 };
 
                 scope.borrar = function(){
-                    scope.inputText = scope.inputText.substr(0, scope.inputText.length - 1)
+                    scope.inputText = scope.inputText.substr(0, scope.inputText.length - 1);
                 };
                 scope.executeExec=function() {
                     scope.execute.exec();
-                }
-                if(attrs.typeExecute == "find") {
+                };
+                if(attrs.typeExecute === 'find') {
                     scope.execute={
-                        name:"buscar",
+                        name: 'buscar',
                         exec:function() {
                             scope.showkeyboardPanel = false;
                         }
-                    }
+                    };
                 } else {
-                    scope.execute={
-                        name:"Intro",
+                    scope.execute = {
+                        name: 'Intro',
                         exec:function(){
                             scope.teclar('\n');
                         }
-                    }
+                    };
                 }
             },
             templateUrl: 'views/templates/keyboard.html'
