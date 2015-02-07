@@ -40,7 +40,7 @@
 </div>
 <keyboard input-text="search.name" show-keyboard-panel="showKeyboardpanel" type-execute="find"></keyboard>
 
-<modal-dialog show='statesShow' width='70%' height='80%' tipemodal="blueModal">
+<modal-view show='statesShow' width='70%' height='80%' tipemodal="blueModal">
     <div class="titleCountry"><span class="pais-flag {{selectedItem.code}}"></span><h1> {{selectedItem.name}}  +{{selectedItem.number}}</h1></div>
     <div class="statesPanel">
         <ul class="statesList">
@@ -53,7 +53,7 @@
                     <h3>Usar Codigo</h3>
                     <i class="fa fa-check"></i>
                 </div>
-            </li> 
+            </li>
             <li class="stateItem">
                 <div class="stateName">
                     <i class="fa fa-chevron-right"></i>
@@ -63,7 +63,7 @@
                     <h3>Usar Codigo</h3>
                     <i class="fa fa-check"></i>
                 </div>
-            </li> 
+            </li>
             <li class="stateItem">
                 <div class="stateName">
                     <i class="fa fa-chevron-right"></i>
@@ -73,7 +73,7 @@
                     <h3>Usar Codigo</h3>
                     <i class="fa fa-check"></i>
                 </div>
-            </li> 
+            </li>
             <li class="stateItem">
                 <div class="stateName">
                     <i class="fa fa-chevron-right"></i>
@@ -83,20 +83,7 @@
                     <h3>Usar Codigo</h3>
                     <i class="fa fa-check"></i>
                 </div>
-            </li> 
-        </ul>   
-    </div>
-</modal-dialog>
-<modal-dialog show='serviceShow' width='60%' height='40%' tipemodal="blueModal">
-    <div class="servicePanel">
-        <div class="serviceName"><i class="fa fa-{{icon}}"></i><h1>{{selectedItem.name}}</h1></div>
-        <div class="serviceAddress"><i class="fa fa-home"></i><h6>{{selectedItem.direccion}}</h6></div>
-        <div class="serviceAddress"><i class="fa fa-globe"></i><h6>www.{{selectedItem.name}}.com.bo</h6></div>
-        <ul class="servicePhones">
-            <li class="itemPhone"><i class="fa fa-phone-square"></i>77334561</li>
-            <li class="itemPhone"><i class="fa fa-phone-square"></i>77334561</li>
-            <li class="itemPhone"><i class="fa fa-phone-square"></i>77334561</li>
-            <li class="itemPhone"><i class="fa fa-phone-square"></i>77334561</li>
+            </li>
         </ul>
     </div>
-</modal-dialog>
+</modal-view>
