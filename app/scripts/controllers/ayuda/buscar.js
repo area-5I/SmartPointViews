@@ -14,6 +14,7 @@ angular.module('smartPointViewsApp')
     $scope.statesShow=false;
     $scope.serviceShow=false;
     $scope.search={name:""};
+    $scope.colorBackground="";
     if($scope.servicio=="codigos") {
         $scope.servicios=[
         {name:"Andorra",code:"ad",number:77},
@@ -54,6 +55,7 @@ angular.module('smartPointViewsApp')
         ];
     } else if($stateParams.servicio=='restaurantes') {
         $scope.icon="restaurant";
+        $scope.colorBackground="darkorangeService";
         $scope.servicios=[
         {name:"Dumbo",number:4702020,direccion:"Av. Ayacucho #440"},
         {name:"Globos",number:4702020,direccion:"Av. Ayacucho #440"},
@@ -73,6 +75,7 @@ angular.module('smartPointViewsApp')
         ];
     } else if($stateParams.servicio=='mecanicos') {
         $scope.icon="mecanico";
+        $scope.colorBackground="tealService";
         $scope.servicios=[
         {name:"Don Luis",number:79732456,direccion:"Av. Circuvalacion #567"},
         {name:"El Choco",number:79732456,direccion:"Av. Circuvalacion #567"},
@@ -83,9 +86,10 @@ angular.module('smartPointViewsApp')
         {name:"Lupe",number:79732456,direccion:"Av. Circuvalacion #567"},
         {name:"El Gringo",number:79732456,direccion:"Av. Circuvalacion #567"}
         ];
-    
+
     } else if($stateParams.servicio=='taxis') {
         $scope.icon="taxi";
+        $scope.colorBackground="yellowService";
         $scope.servicios=[
         {name:"Ciudad Jardin",number:4787989,direccion:"Av. Panamericana #122"},
         {name:"San Pedro",number:4787989,direccion:"Av. Panamericana #122"},
