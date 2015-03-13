@@ -19,7 +19,7 @@ angular.module('smartPointViewsApp')
           $scope.numero=$scope.numero.slice(0,$scope.numero.length-1);
       };
       $scope.llamarNumero=function() {
-        $location.path('/llamada/llamando/'+$scope.numero);
+        $location.path('/conectando/'+$scope.numero);
       };
       $scope.ingresoMoneda = function ingresoMoneda(cantidad) {
           $scope.moneda += cantidad;

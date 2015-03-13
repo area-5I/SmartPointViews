@@ -79,6 +79,11 @@ angular
       .state('llamando.hextris', {
         url:'/hextris',
         templateUrl: 'views/llamada/hextris.html'
+      })
+      .state('conectando', {
+        url: '/conectando/:numero',
+        templateUrl: 'views/llamada/conectando.html',
+        controller: 'LlamadaConectandoCtrl'
       });
   })
     .service('changeColorHeader', function () {
